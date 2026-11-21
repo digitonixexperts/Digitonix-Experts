@@ -37,9 +37,9 @@ export default function SiteHeader() {
           <Link href="/#about" onClick={close}>About</Link>
           <Link href="/#work" onClick={close}>Our Approach</Link>
           <Link href="/#faq" onClick={close}>FAQs</Link>
-          <Link className="mobile-contact-link" href="/#contact" onClick={close}>Contact Us</Link>
+          <Link className="mobile-contact-link" href="/contact" onClick={close}>Contact Us</Link>
         </nav>
-        <Link className="button button-dark nav-cta" href="/#contact">Contact Us <span aria-hidden="true">↗</span></Link>
+        <Link className="button button-dark nav-cta" href="/contact">Contact Us <span aria-hidden="true">↗</span></Link>
       </div>
     </header>
   );
