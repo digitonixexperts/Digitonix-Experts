@@ -262,3 +262,26 @@
 @media(prefers-reduced-motion:reduce) {
   .service-card,.service-arrow { transition:none; }
 }
+
+
+/* Dark brand marquee / growth-team strip */
+.trust-strip {
+  background:#061a38;
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.trust-inner {
+  color:#91a9c7;
+}
+.trust-inner span {
+  color:#91a9c7;
+}
+.trust-inner b {
+  color:#f4f8ff;
+}
+.trust-inner i {
+  color:#35a2ff;
+}
+@media(max-width:680px) {
+  .trust-strip { background:#061a38; }
+}
