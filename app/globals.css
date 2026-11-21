@@ -125,3 +125,25 @@
  .nav-dropdown-menu a { padding:10px 8px; font-size:12px; }
  .mobile-contact-link { display:block; }
 }
+
+/* Contact and privacy pages */
+.contact-page-hero { padding-bottom:58px; }
+.contact-page-content { background:#fff; }
+.contact-page-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:70px; align-items:start; }
+.contact-page-grid h2 { font-size:clamp(36px,4.5vw,54px); line-height:1.1; letter-spacing:-.045em; margin:20px 0; }
+.contact-page-grid h2 span { color:#2475dc; }
+.contact-page-grid>div>p { color:#66748a; line-height:1.8; max-width:440px; }
+.contact-page-note,.privacy-disclaimer { margin:30px 0; padding:20px 22px; background:#f2f7fd; border-left:3px solid #2475dc; border-radius:0 10px 10px 0; }
+.contact-page-note p { margin:9px 0 0; color:#5f6d82; font-size:13px; line-height:1.75; }
+.contact-page-form { background:#f6f8fb; border:1px solid #e6edf5; border-radius:16px; padding:28px; }
+.privacy-hero { padding:75px 0 65px; }
+.privacy-hero h1 { font-size:clamp(44px,6vw,72px); line-height:1.05; letter-spacing:-.05em; margin:24px 0 18px; }
+.privacy-hero h1 span { color:#2475dc; }
+.privacy-updated { margin-top:24px; color:#718096; font-size:13px; }
+.privacy-content { background:#fff; }
+.privacy-copy { max-width:850px; }
+.privacy-copy>p { color:#5d6b81; font-size:15px; line-height:1.9; margin:0 0 22px; }
+.privacy-copy h2 { margin:36px 0 12px; font-size:22px; letter-spacing:-.02em; color:#14233d; }
+.privacy-copy a { color:#1676d2; text-decoration:underline; }
+.privacy-copy .button { color:#fff; text-decoration:none; margin-top:12px; }
+@media(max-width:760px) { .contact-page-grid { grid-template-columns:1fr; gap:35px; } .contact-page-form { padding:20px; } .privacy-copy h2 { font-size:20px; } }
