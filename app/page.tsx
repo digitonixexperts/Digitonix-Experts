@@ -62,9 +62,9 @@ export default function Home() {
             </div>
             <div className="hero-proof"><div className="proof-avatars"><span>D</span><span>X</span><span>+</span></div><p><strong>One team. More possibilities.</strong><br />Strategy, creativity, and technology under one roof.</p></div>
           </div>
-          <div className="hero-art hero-video-art" aria-label="Animated blue digital technology video">
-            <iframe className="hero-video" src="https://www.youtube-nocookie.com/embed/i46AOVAqOxo?autoplay=1&mute=1&controls=0&loop=1&playlist=i46AOVAqOxo&modestbranding=1&playsinline=1" title="Blue digital technology network animation" allow="autoplay; encrypted-media; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" />
-            <div className="hero-video-overlay"><span className="video-live-dot" /> DIGITAL IDEAS IN MOTION <b>DX</b></div>
+          <div className="hero-art hero-image-art" aria-label="Blue digital globe and connected technology network">
+            <img className="hero-image" src="/digitonix-hero.svg" alt="Glowing blue digital globe with connected network lines" />
+            <div className="hero-image-caption"><span className="image-live-dot" /> DIGITAL IDEAS. CONNECTED.</div>
           </div>
         </div>
         <div className="container hero-foot"><span>CREATIVE THINKING</span><span>×</span><span>TECHNICAL PRECISION</span><span>×</span><span>MEASURABLE PROGRESS</span><span className="scroll-cue">SCROLL TO EXPLORE ↓</span></div>
