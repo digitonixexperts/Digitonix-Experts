@@ -51,12 +51,18 @@ export default function Home() {
           <BrandMark />
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">{menuOpen ? "✕" : "☰"}</button>
           <nav className={menuOpen ? "nav-links nav-open" : "nav-links"}>
-            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+            <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
+            <details className="nav-dropdown">
+              <summary>Services <span aria-hidden="true">⌄</span></summary>
+              <div className="nav-dropdown-menu">
+                {services.map((service) => <a key={service.slug} href={"/services/" + service.slug} onClick={() => setMenuOpen(false)}>{service.title}<span aria-hidden="true">↗</span></a>)}
+              </div>
+            </details>
             <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
             <a href="#work" onClick={() => setMenuOpen(false)}>Our approach</a>
             <a href="#faq" onClick={() => setMenuOpen(false)}>FAQs</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
           </nav>
-          <a className="button button-dark nav-cta" href="#contact">Let’s talk <Arrow diagonal /></a>
         </div>
       </header>
 
