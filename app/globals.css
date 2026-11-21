@@ -315,3 +315,10 @@
 .approach-section .process-grid h3{color:#fbf7f0}
 .approach-section .process-grid p{color:#c5beb3}
 @media(max-width:680px){.approach-section{background:linear-gradient(160deg,#292722 0%,#37332d 100%)}}
+
+
+/* Refined square framing for the original office photo */
+.about-office-photo{inset:50% auto auto 50%;width:min(100%,420px);height:auto;aspect-ratio:1/1;transform:translate(-50%,-50%);border-radius:8px;background:#e9e4dc;box-shadow:0 24px 60px rgba(25,29,35,.16)}
+.about-office-photo>img{width:100%;height:100%;object-fit:contain;object-position:center;image-rendering:auto}
+.about-photo-label{right:0;bottom:0;border-radius:5px 0 0 0;background:#fbfaf7;padding:14px 18px;box-shadow:0 8px 24px rgba(25,29,35,.12)}
+@media(max-width:680px){.about-office-photo{inset:50% auto auto 50%;width:min(100%,390px);height:auto;aspect-ratio:1/1}.about-photo-label{padding:11px 14px}}
