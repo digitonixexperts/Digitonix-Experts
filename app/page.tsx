@@ -84,7 +84,7 @@ export default function Home() {
 
       <section className="about-section section" id="about">
         <div className="container about-grid">
-          <div className="about-visual"><div className="about-panel"><div className="about-panel-top"><span>DX / OUR MINDSET</span><span>EST. FOR WHAT’S NEXT</span></div><div className="about-monogram">D<span>X</span></div><div className="about-panel-bottom"><span>THINK CLEAR.</span><span>BUILD BOLD.</span><span>MOVE FORWARD.</span></div></div><div className="about-note"><span className="note-star">✳</span><p>Good digital work<br /><b>starts with listening.</b></p></div></div>
+          <div className="about-visual"><div className="about-office-photo"><img src="https://i.ibb.co/B5ppn8ng/Gemini-Generated-Image-gf8jx6gf8jx6gf8j.jpg" alt="Digitonix Experts office interior and team workspace" loading="lazy" /><div className="about-photo-label"><span className="note-star">✳</span><p>Good digital work<br /><b>starts with listening.</b></p></div></div></div>
           <div className="about-copy"><div className="eyebrow"><span className="eyebrow-line" /> A LITTLE ABOUT US</div><h2>More than a service provider.<br /><span>A team in your corner.</span></h2><p className="about-lede">At Digitonix Experts, we believe your digital presence should do more than look good. It should make your business easier to discover, trust, and choose.</p><p>That’s why we bring strategy, design, development, and marketing together—so every part of your online presence works toward the same goal. Clear thinking, collaborative work, and solutions shaped around your business come first.</p><a className="button button-outline" href="#contact">Get to know us <Arrow diagonal /></a></div>
         </div>
       </section>
