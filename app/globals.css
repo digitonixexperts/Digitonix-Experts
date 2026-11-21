@@ -147,3 +147,12 @@
 .privacy-copy a { color:#1676d2; text-decoration:underline; }
 .privacy-copy .button { color:#fff; text-decoration:none; margin-top:12px; }
 @media(max-width:760px) { .contact-page-grid { grid-template-columns:1fr; gap:35px; } .contact-page-form { padding:20px; } .privacy-copy h2 { font-size:20px; } }
+
+/* Homepage hero motion video */
+.hero-video-art { position:relative; overflow:hidden; isolation:isolate; background:#061735; border:1px solid rgba(102,174,255,.28); box-shadow:0 28px 80px rgba(4,25,61,.28); }
+.hero-video { position:absolute; inset:0; width:100%; height:100%; border:0; object-fit:cover; pointer-events:none; }
+.hero-video-overlay { position:absolute; inset:auto 0 0; min-height:58px; display:flex; align-items:center; gap:10px; padding:14px 18px; color:#fff; font-size:10px; letter-spacing:.16em; font-weight:700; background:linear-gradient(transparent,rgba(2,12,32,.82)); }
+.hero-video-overlay b { margin-left:auto; font-size:19px; letter-spacing:-.08em; color:#8ec8ff; }
+.video-live-dot { width:7px;height:7px;border-radius:50%;background:#49d9ff;box-shadow:0 0 12px #49d9ff; }
+@media(prefers-reduced-motion:reduce) { .hero-video { display:none; } .hero-video-art { background:radial-gradient(circle at 50% 45%,#1767b6,#061735 72%); } }
+@media(max-width:700px) { .hero-video-art { min-height:260px; } }
