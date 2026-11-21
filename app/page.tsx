@@ -70,7 +70,6 @@ export default function Home() {
             <div className="hero-image-caption"><span className="image-live-dot" /> DIGITAL IDEAS. CONNECTED.</div>
           </div>
         </div>
-        <div className="container hero-foot"><span>CREATIVE THINKING</span><span>×</span><span>TECHNICAL PRECISION</span><span>×</span><span>MEASURABLE PROGRESS</span><span className="scroll-cue">SCROLL TO EXPLORE ↓</span></div>
       </section>
 
       <section className="trust-strip"><div className="container trust-inner"><span>YOUR DIGITAL GROWTH TEAM</span><b>DESIGN</b><i>✳</i><b>DEVELOPMENT</b><i>✳</i><b>MARKETING</b><i>✳</i><b>STRATEGY</b></div></section>
