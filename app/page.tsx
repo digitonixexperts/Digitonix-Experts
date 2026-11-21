@@ -113,10 +113,7 @@ export default function Home() {
       <section className="work-section section">
         <div className="container">
           <div className="section-heading split-heading"><div><div className="eyebrow"><span className="eyebrow-line" /> THE POSSIBILITIES</div><h2>Work that works<br /><span>for your business.</span></h2></div><p>Every project is different. Here’s a glimpse of the kind of thoughtful digital experiences we can create together.</p></div>
-          <div className="projects-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className={"project-art " + project.color}><div className="project-art-top"><span>{project.type}</span><span>0{index + 1} / 03</span></div><div className="project-art-center"><span>{project.mark}</span><strong>{index === 0 ? "GOOD THINGS
-ARE IN STORE." : index === 1 ? "MAKE ROOM
-FOR BETTER." : "GROW WITH
-INTENTION."}</strong><i>↗</i></div><div className="project-art-bottom"><span>CONCEPT PREVIEW</span><span>DX STUDIO</span></div></div><div className="project-caption"><div><h3>{project.title}</h3><p>{project.detail}</p></div><span className="project-link">↗</span></div></article>)}</div>
+          <div className="projects-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className={"project-art " + project.color}><div className="project-art-top"><span>{project.type}</span><span>0{index + 1} / 03</span></div><div className="project-art-center"><span>{project.mark}</span><strong>{index === 0 ? "GOOD THINGS ARE IN STORE." : index === 1 ? "MAKE ROOM FOR BETTER." : "GROW WITH INTENTION."}</strong><i>↗</i></div><div className="project-art-bottom"><span>CONCEPT PREVIEW</span><span>DX STUDIO</span></div></div><div className="project-caption"><div><h3>{project.title}</h3><p>{project.detail}</p></div><span className="project-link">↗</span></div></article>)}</div>
           <p className="portfolio-note">Illustrative concepts shown. Ask us about work relevant to your industry and goals.</p>
         </div>
       </section>
