@@ -199,3 +199,19 @@
   .hero-foot { position:relative; }
 }
 @media(prefers-reduced-motion:reduce) { .hero-video { display:none; } .hero-video-art { background:#071a35 url('/digitonix-hero.svg') center/cover no-repeat; } }
+
+
+/* Extend the hero video all the way to both viewport edges */
+.hero-video-art {
+  width:100vw;
+  max-width:none;
+  left:50%;
+  right:auto;
+  transform:translateX(-50%);
+  border:0 !important;
+  border-radius:0 !important;
+  outline:0;
+}
+@media(max-width:680px) {
+  .hero-video-art { width:100vw; left:50%; transform:translateX(-50%); }
+}
