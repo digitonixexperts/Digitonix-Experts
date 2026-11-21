@@ -294,3 +294,7 @@
 .about-photo-label p{font-size:10px;line-height:1.5;margin:0;color:#63738a}
 .about-photo-label b{color:var(--navy)}
 @media(max-width:680px){.about-office-photo{inset:8px 0 15px}.about-photo-label{padding:12px 15px}}
+
+/* Tighten the whitespace above the services section */
+.services-section{padding-top:76px}
+@media(max-width:680px){.services-section{padding-top:58px}}
