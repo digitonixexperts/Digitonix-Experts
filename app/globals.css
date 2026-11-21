@@ -298,3 +298,13 @@
 /* Tighten the whitespace above the services section */
 .services-section{padding-top:76px}
 @media(max-width:680px){.services-section{padding-top:58px}}
+
+
+/* Warm, premium contrast for the How We Work section */
+.approach-section{background:linear-gradient(135deg,#eee8de 0%,#e7dfd2 100%);position:relative;isolation:isolate}
+.approach-section:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 82% 12%,rgba(255,255,255,.62),transparent 42%),radial-gradient(ellipse at 8% 88%,rgba(164,133,91,.08),transparent 38%)}
+.approach-section .process-grid{border-top-color:#d3c8b8}
+.approach-section .process-grid article{border-color:#d3c8b8}
+.approach-section .process-number{color:#9a7042}
+.approach-section .process-icon{background:#f8f4ed;color:#9a7042;border:1px solid #e3d8c8;box-shadow:0 8px 20px rgba(74,56,34,.06)}
+@media(max-width:680px){.approach-section{background:linear-gradient(160deg,#eee8de 0%,#e7dfd2 100%)}}
