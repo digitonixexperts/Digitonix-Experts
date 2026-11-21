@@ -62,13 +62,9 @@ export default function Home() {
             </div>
             <div className="hero-proof"><div className="proof-avatars"><span>D</span><span>X</span><span>+</span></div><p><strong>One team. More possibilities.</strong><br />Strategy, creativity, and technology under one roof.</p></div>
           </div>
-          <div className="hero-art" aria-label="Abstract blue digital design illustration">
-            <div className="orbit orbit-one" /><div className="orbit orbit-two" />
-            <div className="hero-glow" />
-            <div className="hero-card card-main"><div className="card-top"><span className="mini-logo">DX</span><span>CREATIVE / DIGITAL</span><span className="card-dots">•••</span></div><div className="hero-card-title">Ideas into<br /><em>impact.</em></div><div className="card-bars"><i /><i /><i /></div><div className="card-bottom"><span>DESIGN WITH PURPOSE</span><span>01 — 08</span></div></div>
-            <div className="float-chip chip-one"><span className="chip-icon">✳</span><span><b>Built around you</b><small>Strategy first</small></span></div>
-            <div className="float-chip chip-two"><span className="chip-icon">↗</span><span><b>Made to perform</b><small>Growth minded</small></span></div>
-            <div className="hero-stamp">DX<br /><small>EXPERTS</small></div>
+          <div className="hero-art hero-video-art" aria-label="Animated blue digital technology video">
+            <iframe className="hero-video" src="https://www.youtube-nocookie.com/embed/i46AOVAqOxo?autoplay=1&mute=1&controls=0&loop=1&playlist=i46AOVAqOxo&modestbranding=1&playsinline=1" title="Blue digital technology network animation" allow="autoplay; encrypted-media; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" />
+            <div className="hero-video-overlay"><span className="video-live-dot" /> DIGITAL IDEAS IN MOTION <b>DX</b></div>
           </div>
         </div>
         <div className="container hero-foot"><span>CREATIVE THINKING</span><span>×</span><span>TECHNICAL PRECISION</span><span>×</span><span>MEASURABLE PROGRESS</span><span className="scroll-cue">SCROLL TO EXPLORE ↓</span></div>
