@@ -2,6 +2,50 @@ import Link from "next/link";
 import SiteHeader from "../../components/SiteHeader";
 import { notFound } from "next/navigation";
 
+const serviceHeroImages: Record<string, string> = {
+  "website-development": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=85",
+  "wordpress-development": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2000&q=85",
+  "shopify-development": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=2000&q=85",
+  "seo": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=85",
+  "digital-marketing": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=2000&q=85",
+  "graphic-design": "https://images.unsplash.com/photo-154 art-?auto=format&fit=crop&w=2000&q=85",
+  "branding": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=2000&q=85",
+  "app-development": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9?auto=format&fit=crop&w=2000&q=85",
+  "logo-design": "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=2000&q=85",
+  "web-design": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=85",
+  "cms-development": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=85",
+  "ecommerce-development": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=2000&q=85",
+  "wix-development": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=85",
+  "squarespace-development": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=85",
+  "website-redesign": "https://images.unsplash.com/photo-152372 book-?auto=format&fit=crop&w=2000&q=85",
+  "website-maintenance": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2000&q=85",
+  "webflow-development": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=85",
+  "social-media-marketing": "https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=2000&q=85",
+  "frontend-development": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2000&q=85",
+  "backend-development": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85",
+  "ai-integration": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=2000&q=85",
+  "mern-stack-development": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=85",
+  "lamp-stack-development": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85",
+  "mobile-app-development": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9?auto=format&fit=crop&w=2000&q=85",
+  "web-app-development": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=85",
+  "hosting-domain-services": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85",
+  "brand-identity": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=2000&q=85",
+  "content-writing": "https://images.unsplash.com/photo-1455390582262-044c cao-?auto=format&fit=crop&w=2000&q=85",
+  "domain-registration": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2000&q=85",
+  "domain-transfer": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85",
+  "managed-web-hosting": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85",
+  "website-migration": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85",
+  "vps-dedicated-servers": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85",
+  "email-hosting": "https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&w=2000&q=85",
+  "ssl-certificates": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=2000&q=85",
+  "server-management": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85",
+  "devops-services": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2000&q=85",
+  "brand-strategy": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=2000&q=85",
+  "brand-voice": "https://images.unsplash.com/photo-1455390582262-044c cao-?auto=format&fit=crop&w=2000&q=85",
+  "website-content": "https://images.unsplash.com/photo-1455390582262-044c cao-?auto=format&fit=crop&w=2000&q=85",
+  "blog-writing": "https://images.unsplash.com/photo-1455390582262-044c cao-?auto=format&fit=crop&w=2000&q=85"
+};
+
 const services = [
   { slug: "website-development", number: "01", title: "Website Development", intro: "A website should do more than look good. It should make it easy for the right people to understand what you do, trust your business, and take the next step.", summary: "Custom, responsive websites shaped around your goals, your audience, and the way your business works.", outcomes: ["A clear, intuitive experience across desktop, tablet, and mobile", "A structure that makes your services and value easy to understand", "Thoughtful calls to action that guide visitors toward contacting you", "A flexible foundation that can evolve as your business grows"], steps: ["Understand your business, audience, and goals", "Plan the page structure and visual direction", "Design and develop responsive page experiences", "Review, refine, and prepare your site for launch"], deliverables: ["Custom page design and development", "Responsive layouts for modern devices", "Contact and inquiry pathways", "Launch preparation and handover"], faqs: [["Can you build a website from scratch?", "Yes. We can plan and build a new website around your brand, audience, and business goals."], ["Can you redesign my current website?", "Absolutely. We can review your existing site and shape a clearer, more effective experience."], ["Will my website work on mobile?", "Responsive layouts are part of the build, so the experience adapts to phones, tablets, and desktop screens."]] },
   { slug: "wordpress-development", number: "02", title: "WordPress Development", intro: "Get a website you can confidently manage. We create WordPress experiences that balance a distinctive design with practical editing and room to grow.", summary: "Flexible WordPress websites built for easy content management, strong usability, and long-term growth.", outcomes: ["An editable website experience that supports your team's workflow", "Custom layouts aligned with your brand and content needs", "Clear navigation and page structures", "A scalable platform for future content and functionality"], steps: ["Map your content, pages, and required functionality", "Choose a suitable WordPress foundation", "Build and configure your custom website", "Review the editing experience and prepare for launch"], deliverables: ["WordPress website setup and configuration", "Custom page layouts and styling", "Responsive design implementation", "Content management handover"], faqs: [["Can I update the website myself?", "Yes. We aim to make everyday content updates straightforward through the WordPress editor."], ["Can you work on an existing WordPress site?", "Yes. We can improve, redesign, or extend an existing WordPress website after reviewing its setup."], ["Can you add new pages later?", "Yes. We can plan a flexible structure that supports new pages and content as your business develops."]] },
@@ -68,7 +112,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   return <main className="service-page">
     <div className="announcement"><span className="status-dot" /> DIGITAL PARTNERS FOR AMBITIOUS BUSINESSES <span className="announcement-right">SERVING CLIENTS ACROSS THE UNITED STATES</span></div>
     <SiteHeader />
-    <section className="service-hero"><div className="container"><div className="eyebrow"><span className="eyebrow-line" /> SERVICE {service.number} / DIGITONIX EXPERTS</div><div className="service-hero-grid"><div><h1>{service.title}<br /><span>built around your goals.</span></h1><p className="service-intro">{service.intro}</p><div className="hero-actions"><Link className="button button-blue" href="/#contact">Discuss your project <span aria-hidden="true">↗</span></Link><Link className="text-link" href="/#services">Explore all services <span aria-hidden="true">→</span></Link></div></div><div className="service-hero-art service-banner-art"><img className="service-banner-image" src={"/service-banners/" + service.slug + ".svg"} alt={service.title + " service banner"} /><span className="service-art-number">{service.number}</span><span className="service-art-mark">DX</span><span className="service-art-caption">{service.title.toUpperCase()}<br />DIGITONIX EXPERTS</span></div></div><div className="service-breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/#services">Services</Link><span>/</span><b>{service.title}</b></div></div></section>
+    <section className="service-hero service-hero-photo" style={{ backgroundImage: `linear-gradient(90deg, rgba(5,12,23,.88) 0%, rgba(5,12,23,.66) 48%, rgba(5,12,23,.22) 100%), url(${serviceHeroImages[service.slug] || serviceHeroImages["website-development"]})` }}><div className="container service-photo-container"><div className="service-photo-copy"><div className="service-photo-eyebrow">DIGITONIX EXPERTS <span /> PROFESSIONAL DIGITAL SERVICES</div><h1>{service.title}</h1><p className="service-intro">{service.intro}</p><div className="service-breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/#services">Services</Link><span>/</span><b>{service.title}</b></div></div></div></section>
     <section className="section service-overview"><div className="container service-two-col"><div><div className="eyebrow"><span className="eyebrow-line" /> THE RIGHT FOUNDATION</div><h2>Make every digital detail<br /><span>work harder for you.</span></h2></div><p>{service.summary} We shape the work around your priorities, keeping the experience useful for your customers and manageable for your team.</p></div><div className="container service-outcomes">{service.outcomes.map((item, index) => <article key={item}><span>0{index + 1}</span><p>{item}</p></article>)}</div></section>
     <section className="section service-process"><div className="container"><div className="eyebrow"><span className="eyebrow-line" /> HOW WE APPROACH IT</div><h2>A thoughtful process.<br /><span>A clearer way forward.</span></h2><div className="service-steps">{service.steps.map((item, index) => <article key={item}><span>0{index + 1}</span><h3>{["Discover","Plan","Create","Refine"][index]}</h3><p>{item}</p></article>)}</div></div></section>
     <section className="section service-deliverables"><div className="container service-two-col"><div><div className="eyebrow"><span className="eyebrow-line" /> WHAT'S INCLUDED</div><h2>Focused on the things<br /><span>that matter.</span></h2></div><ul>{service.deliverables.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul></div></section>
