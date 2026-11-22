@@ -30,6 +30,6 @@ export default function ContactPage() {
         </>}
       </form>
     </div></section>
-    <footer className="site-footer"><div className="container footer-bottom"><span>© {new Date().getFullYear()} Digitonix Experts. All rights reserved.</span><Link href="/privacy-policy">Privacy Policy</Link><Link href="/">Back to home ↑</Link></div></footer>
+    <footer className="site-footer"><div className="container footer-bottom"><span>© {new Date().getFullYear()} Digitonix Experts. All rights reserved.</span><Link href="/pricing">Pricing</Link><Link href="/privacy-policy">Privacy Policy</Link><Link href="/">Back to home ↑</Link></div></footer>
   </main>;
 }
