@@ -105,14 +105,14 @@ export default function PricingPage() {
       <div className="eyebrow"><span className="eyebrow-line" /> STRAIGHTFORWARD OPTIONS. THOUGHTFUL WORK.</div>
       <h1>Flexible pricing<br /><span>for your next move.</span></h1>
       <p>Explore service packages designed to give your project a clear starting point. Choose a category to compare deliverables and find the right fit for your goals.</p>
-      <div className="pricing-meta"><span><b>16</b> service categories</span><i /> <span>USD pricing</span><i /> <span>Clear package details</span></div>
+      <div className="pricing-meta"><span><b>{categories.length}</b> service categories</span><i /> <span>USD pricing</span><i /> <span>Clear package details</span></div>
     </div></section>
     <section className="pricing-catalog"><div className="container">
       <div className="pricing-section-heading"><div><div className="eyebrow"><span className="eyebrow-line" /> EXPLORE PACKAGES</div><h2>Find the right <span>plan for you.</span></h2></div><p>Every project is different. These packages are starting points; final scope and quote are confirmed after we understand your requirements.</p></div>
       <div className="pricing-tabs" role="tablist" aria-label="Pricing categories">
         {categories.map((category, index) => <button key={category.name} role="tab" aria-selected={active === index} className={active === index ? "pricing-tab active" : "pricing-tab"} onClick={() => setActive(index)}>{category.name}</button>)}
       </div>
-      <div className="pricing-selected-heading"><div><span className="pricing-kicker">SELECTED SERVICE</span><h3>{selected.name}</h3><p>{selected.note}</p></div><span className="pricing-count">0{active + 1} <i>/ 16</i></span></div>
+      <div className="pricing-selected-heading"><div><span className="pricing-kicker">SELECTED SERVICE</span><h3>{selected.name}</h3><p>{selected.note}</p></div><span className="pricing-count">{String(active + 1).padStart(2, "0")} <i>/ {categories.length}</i></span></div>
       <div className="pricing-cards" role="tabpanel">
         {selected.plans.map((plan) => <article className={"pricing-card" + (plan.featured ? " pricing-featured" : "")} key={plan.name}>
           <div className="pricing-card-top"><span className="pricing-plan-name">{plan.name}</span>{plan.featured && <span className="pricing-popular">POPULAR CHOICE</span>}</div>
