@@ -18,11 +18,15 @@ const serviceGroups = [
   { title: "App Development", slug: "app-development", children: [
     ["Mobile App Development","mobile-app-development"],["Web App Development","web-app-development"]
   ]},
-  { title: "Hosting & Domain Services", slug: "hosting-domain-services", children: [] },
+  { title: "Hosting & Domain Services", slug: "hosting-domain-services", children: [
+    ["Domain Registration","domain-registration"],["Domain Transfer","domain-transfer"],["Managed Web Hosting","managed-web-hosting"],["Website Migration","website-migration"],["VPS & Dedicated Servers","vps-dedicated-servers"],["Email Hosting","email-hosting"],["SSL Certificates","ssl-certificates"],["Server Management","server-management"],["DevOps Services","devops-services"]
+  ] },
   { title: "Brand Identity", slug: "brand-identity", children: [
-    ["Brand Identity","brand-identity"],["Branding","branding"],["Graphic Design","graphic-design"]
+    ["Brand Identity","brand-identity"],["Branding","branding"],["Graphic Design","graphic-design"],["Brand Strategy","brand-strategy"],["Brand Voice","brand-voice"]
   ]},
-  { title: "Content Writing", slug: "content-writing", children: [] }
+  { title: "Content Writing", slug: "content-writing", children: [
+    ["Website Content","website-content"],["Blog Writing","blog-writing"]
+  ] }
 ];
 
 export default function SiteHeader() {
