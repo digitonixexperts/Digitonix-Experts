@@ -720,3 +720,44 @@
   .site-header .service-submenu a span { color: #70bfff; }
   .site-header .mobile-contact-link { display: flex !important; }
 }
+
+
+/* Restore a clean white header so the blue brand mark stays clearly visible */
+.site-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e8edf2 !important;
+  box-shadow: 0 4px 18px rgba(12, 35, 64, .06) !important;
+}
+.site-header .nav-wrap { background: transparent !important; }
+.site-header .brand { background: transparent !important; }
+.site-header .brand-logo {
+  display: block;
+  object-fit: contain;
+  opacity: 1 !important;
+  filter: none !important;
+}
+.site-header .nav-links > a,
+.site-header .nav-dropdown-trigger {
+  color: #10233f !important;
+}
+.site-header .nav-links > a:hover,
+.site-header .nav-dropdown-trigger:hover,
+.site-header .nav-links > a[aria-current="page"] {
+  color: #0879dc !important;
+}
+.site-header .nav-dropdown-trigger > span,
+.site-header .dropdown-arrow { color: #0879dc !important; }
+.site-header .menu-toggle {
+  border-color: #dce5ee !important;
+  background: #f5f8fb !important;
+}
+.site-header .menu-toggle span { background: #10233f !important; }
+@media (max-width: 760px) {
+  .site-header { background: #fff !important; }
+  .site-header .nav-links,
+  .site-header .nav-links.nav-open { background: #171a1d !important; }
+  .site-header .nav-links > a,
+  .site-header .nav-dropdown-trigger { color: #f4f6f8 !important; }
+  .site-header .menu-toggle { background: #f5f8fb !important; }
+  .site-header .menu-toggle span { background: #10233f !important; }
+}
