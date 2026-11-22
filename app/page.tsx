@@ -35,7 +35,7 @@ function Arrow({ diagonal = false }: { diagonal?: boolean }) {
 function BrandMark() {
   return (
     <a className="brand" href="#top" aria-label="Digitonix Experts home">
-      <img className="brand-logo" src="/de-logo.webp?v=2" alt="Digitonix Experts" />
+      <img className="brand-logo" src="/digitonix-logo.svg" alt="Digitonix Experts" />
     </a>
   );
 }
