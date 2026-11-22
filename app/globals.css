@@ -1089,3 +1089,18 @@ img,video,svg{max-width:100%}
 .service-banner-art .service-art-caption{font-size:10px;letter-spacing:2px;line-height:1.7}
 @media(max-width:800px){.service-banner-art{min-height:250px}}
 @media(max-width:520px){.service-banner-art{min-height:220px;border-radius:16px}}
+
+/* Reference-inspired photographic service hero */
+.service-hero-photo{min-height:410px;padding:0!important;background-color:#101c2e;background-size:cover;background-position:center 48%;display:flex;align-items:center}
+.service-hero-photo:before{display:none}
+.service-photo-container{width:min(1120px,calc(100% - 48px));margin:0 auto;position:relative;padding:76px 0 64px}
+.service-photo-copy{max-width:650px;color:#fff}
+.service-photo-eyebrow{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.8);font-size:11px;font-weight:700;letter-spacing:2.4px;margin-bottom:22px}
+.service-photo-eyebrow span{width:28px;height:2px;background:#65b5ff;display:inline-block}
+.service-hero-photo h1{font-size:clamp(38px,5.2vw,66px);line-height:1.05;letter-spacing:-.045em;color:#fff;margin:0 0 18px;max-width:700px}
+.service-hero-photo .service-intro{font-size:16px;line-height:1.75;color:rgba(255,255,255,.88);max-width:590px;margin:0 0 28px}
+.service-hero-photo .service-breadcrumb{display:flex;gap:11px;align-items:center;color:rgba(255,255,255,.75);font-size:13px;margin-top:28px}
+.service-hero-photo .service-breadcrumb a{color:#fff;text-decoration:none}
+.service-hero-photo .service-breadcrumb b{color:#fff;font-weight:600}
+@media(max-width:800px){.service-hero-photo{min-height:360px;background-position:center}.service-photo-container{width:calc(100% - 40px);padding:62px 0 48px}}
+@media(max-width:520px){.service-hero-photo{min-height:350px}.service-photo-container{width:calc(100% - 36px);padding:52px 0 42px}.service-photo-eyebrow{font-size:9px;letter-spacing:1.5px}.service-hero-photo h1{font-size:38px}.service-hero-photo .service-intro{font-size:14px;line-height:1.65}}
