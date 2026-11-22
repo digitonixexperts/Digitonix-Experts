@@ -34,7 +34,7 @@ export default function SiteHeader() {
               {services.map(([title, slug], index) => <Link href={"/services/" + slug} onClick={close} key={slug}><span className="dropdown-number">0{index + 1}</span>{title}<span className="dropdown-arrow" aria-hidden="true">↗</span></Link>)}
             </div>
           </div>
-          <Link href="/#about" onClick={close}>About</Link>
+          <Link href="/about" onClick={close}>About</Link>
           <Link href="/#work" onClick={close}>Our Approach</Link>
           <Link href="/#faq" onClick={close}>FAQs</Link>
           <Link className="mobile-contact-link" href="/contact" onClick={close}>Contact Us</Link>
