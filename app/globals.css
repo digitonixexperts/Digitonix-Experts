@@ -867,3 +867,37 @@
     grid-row: 1;
   }
 }
+
+
+/* Desktop: keep all service category names on one line as well */
+@media (min-width: 761px) {
+  .site-header .nav-dropdown-menu {
+    width: 300px !important;
+    min-width: 300px !important;
+  }
+  .site-header .service-menu-group {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 28px !important;
+    align-items: center !important;
+  }
+  .site-header .service-category-link {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+  }
+  .site-header .service-category-link > span:first-child {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+  }
+  .site-header .service-category-link .dropdown-arrow {
+    flex: 0 0 auto !important;
+    margin-left: 8px !important;
+  }
+}
