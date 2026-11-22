@@ -826,3 +826,44 @@
   }
   .site-header .service-submenu a span { color: #79c2ff; }
 }
+
+
+/* Keep every top-level service category on a single line on mobile */
+@media (max-width: 760px) {
+  .site-header .nav-dropdown-menu {
+    width: min(310px, calc(100vw - 32px)) !important;
+    min-width: min(290px, calc(100vw - 32px)) !important;
+    overflow-x: hidden !important;
+  }
+  .site-header .service-menu-group {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 34px !important;
+    align-items: center !important;
+  }
+  .site-header .service-category-link {
+    width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    padding: 10px 12px !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+  }
+  .site-header .service-category-link > span:first-child {
+    display: block !important;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+  }
+  .site-header .service-category-link .dropdown-arrow {
+    flex: 0 0 auto !important;
+    margin-left: 8px !important;
+  }
+  .site-header .service-category-toggle {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
