@@ -28,7 +28,8 @@ const serviceGroups = [
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const close = () => { setMenuOpen(false); setActiveCategory(null); };
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const close = () => { setMenuOpen(false); setActiveCategory(null); setServicesOpen(false); };
   return (
     <header className="site-header">
       <div className="container nav-wrap">
@@ -42,7 +43,7 @@ export default function SiteHeader() {
           <Link href="/" onClick={close}>Home</Link>
           <Link href="/about" onClick={close}>About Us</Link>
           <div className="nav-dropdown">
-            <button className="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded={activeCategory !== null} onClick={() => setActiveCategory(activeCategory === "root" ? null : "root")}>Services <span aria-hidden="true">⌄</span></button>
+            <button className="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded={activeCategory !== null} onClick={() => setServicesOpen(!servicesOpen)}>Services <span aria-hidden="true">⌄</span></button>
             <div className="nav-dropdown-menu">
               {serviceGroups.map((group, index) => <div className={"service-menu-group" + (activeCategory === group.slug ? " category-active" : "")} key={group.slug}>
                 <Link className="service-category-link" href={"/services/" + group.slug} onClick={close}><span>{group.title}</span>{group.children.length > 0 && <span className="dropdown-arrow">›</span>}</Link>
