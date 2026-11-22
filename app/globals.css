@@ -408,3 +408,8 @@
 @media(max-width:900px){.projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project-art{height:330px}.project-art-center strong{font-size:29px}}
 @media(max-width:620px){.work-section{padding-top:76px;padding-bottom:76px}.work-section .section-heading{margin-bottom:30px;gap:15px}.work-section .section-heading h2{font-size:clamp(36px,10vw,46px);letter-spacing:-2.1px}.work-section .split-heading>p{font-size:13px}.projects-grid{grid-template-columns:1fr;gap:17px}.project-card{padding:8px}.project-art{height:320px;padding:18px}.project-art-center strong{font-size:29px}.project-visual{height:118px}.project-caption{padding:15px 9px 10px}.project-caption h3{font-size:15px}.project-caption p{font-size:11px}.portfolio-note{flex-wrap:wrap;gap:8px;margin-top:27px;font-size:7px}}
 @media(prefers-reduced-motion:reduce){.project-card,.project-link{transition:none}.project-card:hover{transform:none}}
+
+/* Softer, more refined contact section background */
+.contact-section{background:linear-gradient(115deg,#102844 0%,#12365a 55%,#0d2948 100%);position:relative;isolation:isolate}
+.contact-section:before{content:"";position:absolute;z-index:-1;width:520px;height:520px;right:4%;top:-210px;border:1px solid rgba(120,184,235,.13);border-radius:50%;box-shadow:0 0 0 38px rgba(120,184,235,.035),0 0 0 78px rgba(120,184,235,.025);pointer-events:none}
+@media(max-width:680px){.contact-section:before{width:360px;height:360px;right:-180px;top:-120px}}
