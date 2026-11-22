@@ -20,7 +20,7 @@ const serviceGroups = [
   ]},
   { title: "Hosting & Domain Services", slug: "hosting-domain-services", children: [] },
   { title: "Brand Identity", slug: "brand-identity", children: [
-    ["Brand Identity","brand-identity"],["Branding","branding"]
+    ["Brand Identity","brand-identity"],["Branding","branding"],["Graphic Design","graphic-design"]
   ]},
   { title: "Content Writing", slug: "content-writing", children: [] }
 ];
