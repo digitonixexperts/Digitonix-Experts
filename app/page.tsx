@@ -15,9 +15,9 @@ const services = [
 ];
 
 const projects = [
-  { type: "E-COMMERCE", title: "A better way to shop online", detail: "Shopify store concept", color: "project-blue", mark: "NORTH / 01" },
-  { type: "BRAND & WEB", title: "A confident digital first impression", detail: "Brand identity + website concept", color: "project-lilac", mark: "FORM & FIELD" },
-  { type: "GROWTH", title: "Built to be found by the right people", detail: "SEO + landing page concept", color: "project-sand", mark: "GROWTH LAB" }
+  { type: "WEB DESIGN & DEVELOPMENT", title: "Websites that turn visits into action", detail: "Responsive websites built around your customers and business goals.", statement: "MAKE EVERY CLICK COUNT.", color: "project-blue", mark: "DIGITAL EXPERIENCES" },
+  { type: "BRANDING & CREATIVE", title: "A brand people recognize and remember", detail: "Distinctive visual identities that give your business a consistent voice.", statement: "BE DISTINCT. BE REMEMBERED.", color: "project-lilac", mark: "BRAND IDENTITY" },
+  { type: "SEO & DIGITAL MARKETING", title: "Get discovered. Build real momentum.", detail: "Search and marketing strategies focused on visibility, leads, and growth.", statement: "TURN VISIBILITY INTO GROWTH.", color: "project-sand", mark: "DIGITAL GROWTH" }
 ];
 
 const faqs = [
@@ -98,9 +98,9 @@ export default function Home() {
 
       <section className="work-section section">
         <div className="container">
-          <div className="section-heading split-heading"><div><div className="eyebrow"><span className="eyebrow-line" /> THE POSSIBILITIES</div><h2>Work that works<br /><span>for your business.</span></h2></div><p>Every project is different. Here’s a glimpse of the kind of thoughtful digital experiences we can create together.</p></div>
-          <div className="projects-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className={"project-art " + project.color}><div className="project-art-top"><span>{project.type}</span><span>0{index + 1} / 03</span></div><div className="project-art-center"><span>{project.mark}</span><strong>{index === 0 ? "GOOD THINGS ARE IN STORE." : index === 1 ? "MAKE ROOM FOR BETTER." : "GROW WITH INTENTION."}</strong><i>↗</i></div><div className="project-art-bottom"><span>CONCEPT PREVIEW</span><span>DX STUDIO</span></div></div><div className="project-caption"><div><h3>{project.title}</h3><p>{project.detail}</p></div><span className="project-link">↗</span></div></article>)}</div>
-          <p className="portfolio-note">Illustrative concepts shown. Ask us about work relevant to your industry and goals.</p>
+          <div className="section-heading split-heading"><div><div className="eyebrow"><span className="eyebrow-line" /> WHAT WE CAN BUILD TOGETHER</div><h2>Ideas into<br /><span>digital results.</span></h2></div><p>From a stronger first impression to a steady flow of new customers, we bring design, technology, and marketing together to move your business forward.</p></div>
+          <div className="projects-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className={"project-art " + project.color}><div className="project-art-top"><span>{project.type}</span><span>0{index + 1} / 03</span></div><div className="project-art-center"><span>{project.mark}</span><strong>{project.statement}</strong><i>↗</i></div><div className="project-art-bottom"><span>MADE FOR YOUR NEXT MOVE</span><span>DX STUDIO</span></div></div><div className="project-caption"><div><h3>{project.title}</h3><p>{project.detail}</p></div><span className="project-link">↗</span></div></article>)}</div>
+          <div className="portfolio-note"><span>01</span> STRATEGY FIRST <i>✳</i> BUILT AROUND YOU <i>✳</i> FOCUSED ON RESULTS</div>
         </div>
       </section>
 
