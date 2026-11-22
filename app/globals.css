@@ -1078,3 +1078,14 @@ img,video,svg{max-width:100%}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* Individual service page banner images */
+.service-banner-art{padding:0!important;min-height:330px;isolation:isolate}
+.service-banner-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:-1}
+.service-banner-art:after{z-index:0;pointer-events:none}
+.service-banner-art .service-art-number,.service-banner-art .service-art-mark,.service-banner-art .service-art-caption{position:relative;z-index:1;text-shadow:0 2px 14px #06152e70}
+.service-banner-art .service-art-number{font-size:14px;letter-spacing:3px}
+.service-banner-art .service-art-mark{font-size:clamp(78px,10vw,130px);font-weight:800;line-height:1;letter-spacing:-.08em;margin:auto 0}
+.service-banner-art .service-art-caption{font-size:10px;letter-spacing:2px;line-height:1.7}
+@media(max-width:800px){.service-banner-art{min-height:250px}}
+@media(max-width:520px){.service-banner-art{min-height:220px;border-radius:16px}}
