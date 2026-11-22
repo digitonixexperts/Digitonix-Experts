@@ -51,11 +51,11 @@ export default function SiteHeader() {
               </div>)}
             </div>
           </div>
-          <div className="nav-dropdown simple-nav-dropdown"><button className="nav-dropdown-trigger" type="button">Locations <span>⌄</span></button><div className="nav-dropdown-menu simple-menu"><Link href="/contact" onClick={close}>United States</Link><Link href="/contact" onClick={close}>Work with our team</Link></div></div>
-          <Link href="/#work" onClick={close}>Case Studies</Link>
-          <Link href="/contact" onClick={close}>Packages</Link>
-          <Link href="/#work" onClick={close}>Portfolio</Link>
-          <Link href="/#faq" onClick={close}>Blog</Link>
+          <Link href="/locations" onClick={close}>Locations</Link>
+          <Link href="/case-studies" onClick={close}>Case Studies</Link>
+          <Link href="/packages" onClick={close}>Packages</Link>
+          <Link href="/portfolio" onClick={close}>Portfolio</Link>
+          <Link href="/blog" onClick={close}>Blog</Link>
           <Link className="mobile-contact-link" href="/contact" onClick={close}>Contact Us</Link>
         </nav>
         <Link className="button button-dark nav-cta" href="/contact">Contact Us <span aria-hidden="true">↗</span></Link>
