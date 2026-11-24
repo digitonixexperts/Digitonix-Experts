@@ -41,9 +41,9 @@ const serviceHeroImages: Record<string, string> = {
   "server-management": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85",
   "devops-services": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2000&q=85",
   "brand-strategy": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=2000&q=85",
-  "brand-voice": "https://images.unsplash.com/photo-1455390582262-044c cao-?auto=format&fit=crop&w=2000&q=85",
-  "website-content": "https://images.unsplash.com/photo-1455390582262-044c cao-?auto=format&fit=crop&w=2000&q=85",
-  "blog-writing": "https://images.unsplash.com/photo-1455390582262-044c cao-?auto=format&fit=crop&w=2000&q=85"
+  "brand-voice": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=2000&q=85",
+  "website-content": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=2000&q=85",
+  "blog-writing": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=2000&q=85"
 };
 
 const services = [
