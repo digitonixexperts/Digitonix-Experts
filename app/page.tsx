@@ -61,7 +61,7 @@ export default function Home() {
               <a className="button button-blue" href="#contact">Start a project <Arrow diagonal /></a>
               <a className="text-link" href="#services">Explore what we do <Arrow /></a>
             </div>
-            <div className="hero-proof"><div className="proof-avatars"><span>D</span><span>X</span><span>+</span></div><p><strong>One team. More possibilities.</strong><br />Strategy, creativity, and technology under one roof.</p></div>
+            <div className="hero-proof"><div className="proof-avatars" aria-label="Business consultant team"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=96&h=96&fit=crop&crop=faces" alt="Business consultant portrait" /><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=96&h=96&fit=crop&crop=faces" alt="Business consultant portrait" /><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=96&h=96&fit=crop&crop=faces" alt="Business consultant portrait" /></div><p><strong>One team. More possibilities.</strong><br />Strategy, creativity, and technology under one roof.</p></div>
           </div>
           <div className="hero-art hero-video-art" aria-label="Technology and laptop video">
             <video className="hero-video" autoPlay muted loop playsInline preload="metadata" poster="/digitonix-hero.svg" aria-label="Technology, laptop and work video">
