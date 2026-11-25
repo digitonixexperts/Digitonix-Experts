@@ -1334,33 +1334,3 @@ img,video,svg{max-width:100%}
 @media(max-width:580px){#reviews .reviews-carousel{width:calc(100% + 18px);margin-right:-18px;mask-image:none}#reviews .reviews-track{gap:12px;animation-duration:30s!important}#reviews .review-slide{flex-basis:min(82vw,310px)!important;width:min(82vw,310px)!important}}
 @media(prefers-reduced-motion:reduce){#reviews .reviews-track{animation:none!important;overflow-x:auto}}
 
-
-/* Premium About Us finish */
-.about-section{position:relative;overflow:hidden;background:linear-gradient(135deg,#f7f9fc 0%,#f1f5fa 55%,#eaf2fb 100%)}
-.about-section:before{content:"";position:absolute;width:520px;height:520px;border:1px solid #0d4d8c0c;border-radius:50%;right:-240px;top:-210px;box-shadow:0 0 0 45px #0d4d8c05,0 0 0 90px #0d4d8c03;pointer-events:none}
-.about-grid{position:relative;z-index:1;gap:clamp(48px,7vw,104px)}
-.about-visual{height:auto;display:block}
-.about-office-photo{height:500px;position:relative;overflow:hidden;background:#dce8f5;box-shadow:0 28px 65px #102f501c}
-.about-office-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#061a3800 48%,#061a3870 100%);pointer-events:none}
-.about-office-photo>img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
-.about-office-photo:hover>img{transform:scale(1.035)}
-.about-photo-label{position:absolute;z-index:2;left:22px;bottom:22px;background:#fff;padding:17px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 12px 35px #071b3520}
-.about-photo-label p{font-size:12px;line-height:1.55;margin:0;color:#718097}
-.about-photo-label b{color:#0a2345}
-.about-image-stamp{position:absolute;z-index:2;right:20px;top:20px;padding:15px 17px;background:#071d3bdc;color:#fff;display:flex;flex-direction:column;gap:5px;backdrop-filter:blur(8px)}
-.about-image-stamp strong{font-family:var(--display);font-size:30px;letter-spacing:-2px;line-height:1}
-.about-image-stamp span,.about-visual-caption{font-size:7px;letter-spacing:1.5px;font-weight:700}
-.about-visual-caption{display:flex;justify-content:space-between;color:#71849c;padding:14px 1px 0}
-.about-copy h2{font-size:clamp(35px,3.7vw,49px);line-height:1.08;letter-spacing:-2.1px;margin:20px 0 23px;max-width:620px}
-.about-copy h2 span{color:#087bd5}
-.about-copy>p{font-size:12px;line-height:1.95;color:#64758c;margin:0 0 14px;max-width:620px}
-.about-copy .about-lede{font-size:15px;line-height:1.8;color:#304966;font-weight:500}
-.about-principles{display:grid;grid-template-columns:1fr;gap:0;margin:24px 0 8px;border-top:1px solid #d8e2ed}
-.about-principles>div{display:flex;gap:16px;align-items:flex-start;padding:13px 0;border-bottom:1px solid #d8e2ed}
-.about-principles>div>span{font-size:9px;font-weight:800;letter-spacing:1px;color:#0780df;padding-top:3px}
-.about-principles p{display:flex;flex-direction:column;gap:4px;margin:0}
-.about-principles b{font-size:12px;color:#102d50}
-.about-principles small{font-size:10px;line-height:1.6;color:#73849a}
-.about-copy .button-outline{margin-top:18px}
-@media(max-width:900px){.about-grid{gap:42px}.about-office-photo{height:430px}}
-@media(max-width:680px){.about-grid{grid-template-columns:1fr;gap:32px}.about-office-photo{height:min(112vw,430px)}.about-copy h2{font-size:36px;letter-spacing:-1.5px}.about-copy .about-lede{font-size:14px}.about-copy>p{font-size:12px}.about-photo-label{left:13px;bottom:13px;padding:13px 15px}.about-image-stamp{right:13px;top:13px}.about-visual-caption{font-size:6px}}
