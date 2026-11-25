@@ -1311,3 +1311,15 @@ img,video,svg{max-width:100%}
 .review-card-foot span:last-child{font-weight:800;color:#bd8500;font-size:10px}
 @media(max-width:900px){.review-slide{flex-basis:calc((100% - 18px)/2)}}
 @media(max-width:580px){.reviews-carousel{gap:12px;margin-right:-18px;padding-right:18px}.review-slide{flex:0 0 min(86%,330px);min-width:0}.review-photo{width:48px;height:48px}}
+
+
+/* Continuous, touch-friendly testimonial carousel */
+.reviews-carousel{display:block;overflow:hidden;position:relative;width:100%;padding:4px 0 18px;mask-image:linear-gradient(to right,transparent,black 2%,black 98%,transparent)}
+.reviews-track{display:flex;align-items:stretch;gap:18px;width:max-content;animation:reviews-marquee 38s linear infinite;will-change:transform}
+.reviews-carousel:hover .reviews-track,.reviews-carousel:focus-within .reviews-track{animation-play-state:paused}
+.review-slide{flex:0 0 340px;width:340px;min-width:0}
+.review-slide-copy{pointer-events:none}
+@keyframes reviews-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:900px){.reviews-track{gap:14px;animation-duration:34s}.review-slide{flex-basis:300px;width:300px}}
+@media(max-width:580px){.reviews-carousel{margin-right:-18px;width:calc(100% + 18px);mask-image:none}.reviews-track{gap:12px;animation-duration:30s}.review-slide{flex-basis:min(82vw,310px);width:min(82vw,310px)}}
+@media(prefers-reduced-motion:reduce){.reviews-track{animation:none;overflow-x:auto}.reviews-carousel{overflow-x:auto}}
