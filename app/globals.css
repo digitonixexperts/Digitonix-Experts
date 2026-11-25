@@ -1323,3 +1323,13 @@ img,video,svg{max-width:100%}
 @media(max-width:900px){.reviews-track{gap:14px;animation-duration:34s}.review-slide{flex-basis:300px;width:300px}}
 @media(max-width:580px){.reviews-carousel{margin-right:-18px;width:calc(100% + 18px);mask-image:none}.reviews-track{gap:12px;animation-duration:30s}.review-slide{flex-basis:min(82vw,310px);width:min(82vw,310px)}}
 @media(prefers-reduced-motion:reduce){.reviews-track{animation:none;overflow-x:auto}.reviews-carousel{overflow-x:auto}}
+
+
+/* Reviews: keep the original horizontal card row and move it sideways only */
+#reviews .reviews-carousel{display:block!important;overflow:hidden!important;position:relative;width:100%;padding:4px 0 18px;mask-image:linear-gradient(to right,transparent,black 2%,black 98%,transparent)}
+#reviews .reviews-track{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:stretch!important;gap:18px;width:max-content!important;animation:reviews-marquee 38s linear infinite!important;transform:translateZ(0);will-change:transform}
+#reviews .review-slide{display:flex!important;flex:0 0 340px!important;width:340px!important;max-width:none!important;min-width:0!important;flex-direction:column!important}
+#reviews .reviews-carousel:hover .reviews-track{animation-play-state:paused!important}
+@media(max-width:900px){#reviews .reviews-track{gap:14px}#reviews .review-slide{flex-basis:300px!important;width:300px!important}}
+@media(max-width:580px){#reviews .reviews-carousel{width:calc(100% + 18px);margin-right:-18px;mask-image:none}#reviews .reviews-track{gap:12px;animation-duration:30s!important}#reviews .review-slide{flex-basis:min(82vw,310px)!important;width:min(82vw,310px)!important}}
+@media(prefers-reduced-motion:reduce){#reviews .reviews-track{animation:none!important;overflow-x:auto}}
