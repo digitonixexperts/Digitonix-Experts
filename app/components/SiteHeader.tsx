@@ -22,8 +22,9 @@ const serviceGroups = [
     ["Domain Registration","domain-registration"],["Domain Transfer","domain-transfer"],["Managed Web Hosting","managed-web-hosting"],["Website Migration","website-migration"],["VPS & Dedicated Servers","vps-dedicated-servers"],["Email Hosting","email-hosting"],["SSL Certificates","ssl-certificates"],["Server Management","server-management"],["DevOps Services","devops-services"]
   ] },
   { title: "Brand Identity", slug: "brand-identity", children: [
-    ["Brand Identity","brand-identity"],["Branding","branding"],["Graphic Design","graphic-design"],["Brand Strategy","brand-strategy"],["Brand Voice","brand-voice"]
-  ]}
+    ["Brand Identity","brand-identity"],["Branding","branding"],["Brand Strategy","brand-strategy"],["Brand Voice","brand-voice"]
+  ]},
+  { title: "Graphic Design", slug: "graphic-design", children: [] }
 ];
 
 export default function SiteHeader() {
