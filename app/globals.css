@@ -1263,3 +1263,22 @@ img,video,svg{max-width:100%}
 @media (prefers-reduced-motion: reduce) {
   .hero-video { display:none; }
 }
+
+/* Consultant portrait avatars: responsive proof strip */
+.proof-avatars{display:flex;align-items:center;flex:0 0 auto}
+.proof-avatars img{display:block;width:34px;height:34px;min-width:34px;object-fit:cover;object-position:center;border-radius:50%;border:2px solid #102b4c;margin-right:-8px;background:#dcecff;box-shadow:0 2px 8px #00152b35}
+.proof-avatars img:nth-child(2){z-index:1}
+.proof-avatars img:nth-child(3){z-index:2}
+.hero-proof{min-width:0;max-width:100%;gap:13px}
+.hero-proof p{min-width:0;overflow-wrap:anywhere}
+@media(max-width:680px){
+ .hero-proof{align-items:center;gap:12px;margin-top:28px}
+ .proof-avatars img{width:32px;height:32px;min-width:32px}
+ .hero-proof p{font-size:10px;line-height:1.45}
+ .hero-proof strong{font-size:10px}
+}
+@media(max-width:360px){
+ .proof-avatars img{width:29px;height:29px;min-width:29px}
+ .hero-proof{gap:10px}
+ .hero-proof p{font-size:9px}
+}
