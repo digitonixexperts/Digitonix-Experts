@@ -1172,3 +1172,94 @@ img,video,svg{max-width:100%}
   .footer-main { grid-template-columns:minmax(0,1fr); }
   .footer-main > div:first-child { grid-column:auto; }
 }
+
+
+/* Final mobile-first layout and reliable hero-video presentation */
+@media (max-width: 760px) {
+  html, body { max-width:100%; overflow-x:hidden; }
+  .container { width:calc(100% - 36px); }
+  .site-header { width:100%; }
+  .nav-wrap { min-width:0; }
+  .brand { flex:0 1 190px; min-width:0; }
+  .brand-logo { width:min(190px,100%); height:58px; object-fit:contain; }
+  .nav-links { z-index:30; }
+  .hero { min-height:0; overflow:hidden; }
+  .hero-inner { min-height:690px; height:auto; padding:0 0 24px; }
+  .hero-video-art { width:100vw; height:100%; min-height:100%; }
+  .hero-video { width:100%; height:100%; object-fit:cover; object-position:58% center; }
+  .hero-video-shade {
+    background:linear-gradient(90deg,rgba(3,15,36,.94),rgba(4,20,45,.76) 70%,rgba(4,20,45,.55)),
+      linear-gradient(0deg,rgba(3,14,33,.62),transparent 65%);
+  }
+  .hero-copy { width:100%; max-width:620px; padding:58px 0 46px; }
+  .hero h1 { font-size:clamp(40px,10.5vw,54px); line-height:1.04; letter-spacing:-2.8px; overflow-wrap:normal; }
+  .hero-lede { max-width:100%; font-size:14px; line-height:1.75; }
+  .hero-actions { display:flex; flex-wrap:wrap; gap:14px; }
+  .hero-proof { margin-top:30px; }
+  .hero-image-caption { right:18px; bottom:14px; max-width:calc(100% - 36px); }
+  .hero-foot { gap:9px; font-size:7px; letter-spacing:.7px; flex-wrap:wrap; }
+  .trust-inner { min-height:80px; height:auto; flex-wrap:wrap; justify-content:center; gap:12px 18px; padding:18px 0; }
+  .trust-inner span { width:100%; text-align:center; }
+  .section { padding:68px 0; }
+  .split-heading { display:block; }
+  .split-heading>p { margin-top:18px; }
+  .services-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .service-card { min-width:0; }
+  .about-grid, .contact-grid, .faq-grid { grid-template-columns:minmax(0,1fr); gap:34px; }
+  .about-visual { width:100%; min-width:0; }
+  .about-panel { width:min(100%,390px); }
+  .process-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .projects-grid { grid-template-columns:minmax(0,1fr); }
+  .cta-inner { min-height:0; padding:58px 0; align-items:flex-start; flex-direction:column; gap:26px; }
+  .contact-copy h2 { font-size:clamp(42px,10vw,54px); }
+  .contact-form-wrap { width:100%; min-width:0; padding:24px 18px; }
+  .contact-form input, .contact-form select, .contact-form textarea { min-width:0; width:100%; font-size:16px; }
+  .footer-main { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 18px; }
+  .footer-main>div { min-width:0; }
+  .footer-main>div:first-child { grid-column:1/-1; }
+  .footer-bottom { height:auto; min-height:64px; padding:16px 0; gap:12px; flex-wrap:wrap; }
+}
+@media (max-width: 520px) {
+  .container { width:calc(100% - 30px); }
+  .announcement { padding:0 14px; font-size:6.5px; letter-spacing:.45px; }
+  .brand { flex-basis:165px; }
+  .brand-logo { width:165px; height:52px; }
+  .hero-inner { min-height:700px; }
+  .hero-copy { padding-top:48px; }
+  .hero h1 { font-size:clamp(38px,10.8vw,49px); letter-spacing:-2.4px; }
+  .hero-actions .button { min-height:46px; padding-inline:16px; }
+  .hero-proof { gap:10px; }
+  .hero-proof p { font-size:9px; }
+  .hero-foot { font-size:6px; gap:7px; }
+  .section { padding:58px 0; }
+  .section-heading h2, .about-copy h2, .faq-grid h2 { font-size:clamp(32px,9vw,39px); }
+  .services-grid { gap:8px; }
+  .service-card { padding:16px 12px; min-height:245px; }
+  .service-card h3 { font-size:13px; }
+  .service-card p { font-size:10px; min-height:78px; }
+  .about-visual { height:330px; }
+  .about-panel { height:290px; padding:20px; }
+  .about-monogram { font-size:120px; margin:38px 0; }
+  .about-note { padding:12px 14px; }
+  .process-grid { gap:12px; }
+  .process-grid article { padding-right:8px; }
+  .project-art { height:235px; }
+  .faq-item button { font-size:13px; gap:14px; }
+  .contact-copy h2 { font-size:44px; }
+  .footer-main { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+  .footer-contact>a { font-size:17px; }
+}
+@media (max-width: 370px) {
+  .container { width:calc(100% - 24px); }
+  .brand { flex-basis:145px; }
+  .brand-logo { width:145px; }
+  .hero-inner { min-height:720px; }
+  .hero h1 { font-size:37px; }
+  .hero-actions { gap:10px; }
+  .hero-actions .button { padding-inline:12px; font-size:11px; }
+  .services-grid, .process-grid, .footer-main { grid-template-columns:minmax(0,1fr); }
+  .footer-main>div:first-child { grid-column:auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { display:none; }
+}
