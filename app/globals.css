@@ -1369,3 +1369,13 @@ img,video,svg{max-width:100%}
 .about-process-list p{font-size:13px;line-height:1.8;color:#718198;margin:0}
 @media(max-width:900px){.about-capabilities-grid{grid-template-columns:repeat(2,1fr)}.about-section-heading{align-items:flex-start;flex-direction:column;gap:16px}.about-approach-grid{gap:42px}}
 @media(max-width:640px){.about-purpose-section{padding-bottom:65px}.about-purpose-grid{grid-template-columns:1fr;gap:12px}.about-purpose-card{min-height:0;padding:27px 23px}.about-capabilities-section,.about-approach-section{padding:68px 0}.about-capabilities-grid{grid-template-columns:1fr;gap:10px}.about-capabilities-grid article{min-height:0;padding:22px}.about-capabilities-grid h3{margin:14px 0 7px}.about-section-heading h2,.about-approach-grid>div:first-child h2{font-size:35px;letter-spacing:-1.2px}.about-approach-grid{grid-template-columns:1fr;gap:28px}}
+
+
+/* About hero: richer company introduction */
+.about-page-hero .inner-hero-grid>div:first-child{max-width:690px}
+.about-hero-detail{max-width:670px;margin:17px 0 23px}
+.about-hero-detail p{font-size:14px;line-height:1.9;color:#63768d;margin:0 0 13px}
+.about-hero-points{display:flex;flex-wrap:wrap;gap:9px 18px;padding-top:9px;margin-top:8px;border-top:1px solid #dce6f0}
+.about-hero-points span{font-size:10px;font-weight:700;color:#244463;display:flex;align-items:center;gap:7px}
+.about-hero-points b{font-size:9px;color:#0780df;letter-spacing:.5px}
+@media(max-width:760px){.about-hero-detail{margin:15px 0 20px}.about-hero-detail p{font-size:13px;line-height:1.8}.about-hero-points{gap:10px 14px}.about-hero-points span{font-size:9px}}
