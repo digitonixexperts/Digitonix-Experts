@@ -85,8 +85,27 @@ export default function Home() {
 
       <section className="about-section section" id="about">
         <div className="container about-grid">
-          <div className="about-visual"><div className="about-office-photo"><img src="https://i.postimg.cc/zB24CTJN/Gemini-Generated-Image-gf8jx6gf8jx6gf8j.jpg" alt="Digitonix Experts office interior and team workspace" loading="lazy" /><div className="about-photo-label"><span className="note-star">✳</span><p>Good digital work<br /><b>starts with listening.</b></p></div></div></div>
-          <div className="about-copy"><div className="eyebrow"><span className="eyebrow-line" /> A LITTLE ABOUT US</div><h2>More than a service provider.<br /><span>A team in your corner.</span></h2><p className="about-lede">At Digitonix Experts, we believe your digital presence should do more than look good. It should make your business easier to discover, trust, and choose.</p><p>That’s why we bring strategy, design, development, and marketing together—so every part of your online presence works toward the same goal. Clear thinking, collaborative work, and solutions shaped around your business come first.</p><a className="button button-outline" href="#contact">Get to know us <Arrow diagonal /></a></div>
+          <div className="about-visual">
+            <div className="about-office-photo">
+              <img src="https://i.postimg.cc/zB24CTJN/Gemini-Generated-Image-gf8jx6gf8jx6gf8j.jpg" alt="Creative digital workspace representing the Digitonix Experts team" loading="lazy" />
+              <div className="about-photo-label"><span className="note-star">✳</span><p>Built on clarity.<br /><b>Driven by progress.</b></p></div>
+              <div className="about-image-stamp"><strong>DX.</strong><span>STRATEGY · DESIGN · TECHNOLOGY</span></div>
+            </div>
+            <div className="about-visual-caption"><span>YOUR DIGITAL GROWTH PARTNER</span><span>01 — 04</span></div>
+          </div>
+          <div className="about-copy">
+            <div className="eyebrow"><span className="eyebrow-line" /> WHO WE ARE</div>
+            <h2>We turn ambitious ideas into <span>digital momentum.</span></h2>
+            <p className="about-lede">Digitonix Experts is a digital solutions partner for businesses ready to build with purpose, show up with confidence, and grow beyond the ordinary.</p>
+            <p>We bring strategy, creative thinking, and technical execution together under one roof. From high-performing websites and e-commerce experiences to brand identity, search visibility, and digital campaigns, we connect every moving part to a bigger business goal.</p>
+            <p>Our approach is personal, practical, and built around your reality. We take time to understand your audience, ask the right questions, communicate clearly, and make considered decisions at every stage. No one-size-fits-all packages. No design for design’s sake. Just thoughtful digital work with a clear reason behind it.</p>
+            <div className="about-principles">
+              <div><span>01</span><p><b>Think strategically</b><small>Start with your goals, audience, and opportunity.</small></p></div>
+              <div><span>02</span><p><b>Create with purpose</b><small>Make every detail useful, clear, and consistent.</small></p></div>
+              <div><span>03</span><p><b>Build for what’s next</b><small>Deliver flexible digital foundations that can grow.</small></p></div>
+            </div>
+            <a className="button button-outline" href="#contact">Let’s build something meaningful <Arrow diagonal /></a>
+          </div>
         </div>
       </section>
 
