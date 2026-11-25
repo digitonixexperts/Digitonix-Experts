@@ -64,8 +64,8 @@ export default function Home() {
             <div className="hero-proof"><div className="proof-avatars"><span>D</span><span>X</span><span>+</span></div><p><strong>One team. More possibilities.</strong><br />Strategy, creativity, and technology under one roof.</p></div>
           </div>
           <div className="hero-art hero-video-art" aria-label="Technology and laptop video">
-            <video className="hero-video" autoPlay muted loop playsInline preload="metadata" aria-label="Technology, laptop and work video">
-              <source src="https://cdn.pixabay.com/video/2025/04/23/273921_large.mp4" type="video/mp4" />
+            <video className="hero-video" autoPlay muted loop playsInline preload="auto" aria-label="Technology, laptop and work video">
+              <source src="https://videos.pexels.com/video-files/3129977/3129977-hd_2560_1440_30fps.mp4" type="video/mp4" />
             </video>
             <div className="hero-video-shade" />
             <div className="hero-image-caption"><span className="image-live-dot" /> DIGITAL IDEAS. CONNECTED.</div>
