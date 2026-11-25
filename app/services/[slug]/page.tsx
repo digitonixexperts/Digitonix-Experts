@@ -48,7 +48,7 @@ const serviceHeroImages: Record<string, string> = {
   "marketing-collateral-design": "https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=2000&q=85",
   "brochure-flyer-design": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=2000&q=85",
   "presentation-design": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2000&q=85",
-  "infographic-design": "https://images.unsplash.com/photo- infographic-placeholder?auto=format&fit=crop&w=2000&q=85",
+  "infographic-design": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=85",
   "seo-content-writing": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=2000&q=85",
   "website-copywriting": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=2000&q=85",
   "product-description-writing": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=2000&q=85",
