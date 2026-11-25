@@ -22,10 +22,13 @@ const serviceGroups = [
     ["Domain Registration","domain-registration"],["Domain Transfer","domain-transfer"],["Managed Web Hosting","managed-web-hosting"],["Website Migration","website-migration"],["VPS & Dedicated Servers","vps-dedicated-servers"],["Email Hosting","email-hosting"],["SSL Certificates","ssl-certificates"],["Server Management","server-management"],["DevOps Services","devops-services"]
   ] },
   { title: "Brand Identity", slug: "brand-identity", children: [
-    ["Brand Identity","brand-identity"],["Branding","branding"],["Graphic Design","graphic-design"],["Brand Strategy","brand-strategy"],["Brand Voice","brand-voice"]
+    ["Brand Identity","brand-identity"],["Branding","branding"],["Brand Strategy","brand-strategy"],["Brand Voice","brand-voice"]
+  ]},
+  { title: "Graphic Design", slug: "graphic-design", children: [
+    ["Social Media Design","social-media-design"],["Marketing Collateral Design","marketing-collateral-design"],["Brochure & Flyer Design","brochure-flyer-design"],["Presentation Design","presentation-design"],["Infographic Design","infographic-design"]
   ]},
   { title: "Content Writing", slug: "content-writing", children: [
-    ["Website Content","website-content"],["Blog Writing","blog-writing"]
+    ["Website Content","website-content"],["Blog Writing","blog-writing"],["SEO Content Writing","seo-content-writing"],["Website Copywriting","website-copywriting"],["Product Description Writing","product-description-writing"],["Social Media Content","social-media-content-writing"],["Email Copywriting","email-copywriting"]
   ] }
 ];
 
