@@ -8,7 +8,13 @@ export default function AboutPage() {
       <SiteHeader />
       <section className="inner-hero about-page-hero">
         <div className="container inner-hero-grid">
-          <div><div className="eyebrow"><span className="eyebrow-line" /> ABOUT DIGITONIX EXPERTS</div><h1>Digital expertise.<br/><span>Built around your ambition.</span></h1><p>We partner with ambitious businesses to turn complex digital challenges into clear strategies, confident brand experiences, and technology built for what comes next.</p><Link className="button button-blue" href="/contact">Let’s work together <span>↗</span></Link></div>
+          <div><div className="eyebrow"><span className="eyebrow-line" /> ABOUT DIGITONIX EXPERTS</div><h1>Digital expertise.<br/><span>Built around your ambition.</span></h1><p>We partner with ambitious businesses to turn complex digital challenges into clear strategies, confident brand experiences, and technology built for what comes next.</p>
+            <div className="about-hero-detail">
+              <p>Digitonix Experts is a digital solutions company focused on helping brands build a stronger presence, reach the right audience, and turn more opportunities into meaningful business growth. We bring creative thinking and technical expertise together, so your website, brand identity, online store, and marketing work as one connected experience.</p>
+              <p>Our work is guided by a simple principle: digital investment should have a business purpose. We plan around your goals, focus on user experience and visibility, and make decisions with performance in mind. Whether you are launching a new business, improving an established brand, or looking to grow your online sales, we aim to create practical solutions that support long-term progress and a healthier return on your investment.</p>
+              <div className="about-hero-points"><span><b>01</b> Strategy-led solutions</span><span><b>02</b> Growth & ROI focused</span><span><b>03</b> Built around your business</span></div>
+            </div>
+            <Link className="button button-blue" href="/contact">Let’s work together <span>↗</span></Link></div>
           <div className="inner-hero-image"><img src="https://i.postimg.cc/zB24CTJN/Gemini-Generated-Image-gf8jx6gf8jx6gf8j.jpg" alt="Digitonix Experts office and collaborative workspace"/></div>
         </div>
       </section>
