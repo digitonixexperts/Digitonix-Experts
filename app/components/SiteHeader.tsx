@@ -24,7 +24,10 @@ const serviceGroups = [
   { title: "Brand Identity", slug: "brand-identity", children: [
     ["Brand Identity","brand-identity"],["Branding","branding"],["Brand Strategy","brand-strategy"],["Brand Voice","brand-voice"]
   ]},
-  { title: "Graphic Design", slug: "graphic-design", children: [] }
+  { title: "Graphic Design", slug: "graphic-design", children: [] },
+  { title: "Content Writing", slug: "content-writing", children: [
+    ["Website Content","website-content"],["Blog Writing","blog-writing"]
+  ] }
 ];
 
 export default function SiteHeader() {
