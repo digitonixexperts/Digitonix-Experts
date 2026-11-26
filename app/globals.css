@@ -1383,3 +1383,10 @@ img,video,svg{max-width:100%}
 .about-page-hero .about-hero-detail{max-width:700px}
 .about-page-hero .about-hero-detail p:last-of-type{margin-bottom:16px}
 @media(min-width:761px){.about-page-hero .inner-hero-grid{align-items:center}.about-page-hero .inner-hero-image{align-self:center}}
+
+
+/* All package categories are stacked vertically for complete page scrolling. */
+.pricing-category-block + .pricing-category-block{margin-top:54px;padding-top:30px;border-top:1px solid #e6edf5}
+.pricing-category-block{scroll-margin-top:110px}
+.pricing-tabs{justify-content:flex-start}
+.pricing-tabs .pricing-tab{text-decoration:none;display:inline-flex;align-items:center}
