@@ -32,7 +32,7 @@ const serviceHeroImages: Record<string, string> = {
   "content-writing": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=2000&q=85",
   "grant-writing": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2000&q=85",
   "ebook-writing": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=2000&q=85",
-  "video-editing": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=2000&q=85",,
+  "video-editing": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=2000&q=85",
   "domain-registration": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2000&q=85",
   "domain-transfer": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85",
   "managed-web-hosting": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=85",
