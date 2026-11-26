@@ -57,8 +57,6 @@ export default function SiteHeader() {
               </div>)}
             </div>
           </div>
-          <Link href="/locations" onClick={close}>Locations</Link>
-          <Link href="/case-studies" onClick={close}>Case Studies</Link>
           <Link href="/packages" onClick={close}>Packages</Link>
           <Link href="/portfolio" onClick={close}>Portfolio</Link>
           <Link href="/blog" onClick={close}>Blog</Link>
