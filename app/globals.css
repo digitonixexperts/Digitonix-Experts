@@ -1546,3 +1546,8 @@ img,video,svg{max-width:100%}
 @media(max-width:850px){.results-hero-grid{gap:30px}.results-grid{gap:15px}.result-card-body{padding:17px}.result-card-body ul{grid-template-columns:1fr}}
 @media(max-width:640px){.results-hero{padding:60px 0 52px}.results-hero-grid{grid-template-columns:1fr;gap:35px;padding-top:25px}.results-hero h1{font-size:48px;letter-spacing:-2.5px}.results-hero-panel{min-height:260px}.results-hero-panel strong{font-size:42px}.results-intro{padding:58px 0 25px}.results-intro-row{display:block}.results-intro-row>p{margin-top:18px}.results-grid-section{padding:20px 0 65px}.results-grid{grid-template-columns:1fr;gap:16px}.result-card-body>p{min-height:0}.result-card-body ul{grid-template-columns:1fr 1fr}.result-visual{min-height:160px}.result-metrics strong{font-size:18px}}
 @media(max-width:370px){.result-card-body ul{grid-template-columns:1fr}.result-card-body{padding:15px}.result-card-head{padding:0 12px}}
+
+
+.result-before-after{margin:14px 14px 0;background:#edf3fa;border:1px solid #e2eaf3;overflow:hidden}
+.result-before-after img{display:block;width:100%;height:auto;aspect-ratio:1200/620;object-fit:cover}
+.result-card .result-visual{margin-top:0}
