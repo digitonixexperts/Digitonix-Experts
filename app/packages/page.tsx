@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import SiteHeader from "../components/SiteHeader";
 
 type Plan = { name: string; price: string; cadence?: string; featured?: boolean; features: string[] };
@@ -115,6 +116,8 @@ const categories: Category[] = [
 ];
 
 export default function PackagesPage() {
+  const [active, setActive] = useState(0);
+  const category = categories[active];
   return <main className="pricing-page">
     <div className="announcement"><span className="status-dot" /> DIGITAL PARTNERS FOR AMBITIOUS BUSINESSES <span className="announcement-right">SERVING CLIENTS ACROSS THE UNITED STATES</span></div>
     <SiteHeader />
@@ -126,21 +129,26 @@ export default function PackagesPage() {
     </div></section>
     <section className="pricing-catalog"><div className="container">
       <div className="pricing-section-heading"><div><div className="eyebrow"><span className="eyebrow-line" /> EXPLORE ALL PACKAGES</div><h2>Find the right <span>package for you.</span></h2></div><p>All service categories and package tiers are displayed below in one page. Scroll to compare prices, features and deliverables.</p></div>
-      <nav className="pricing-tabs" aria-label="Jump to package category">
-        {categories.map((category, index) => <a key={category.name} className="pricing-tab" href={"#package-category-" + index}>{category.name}</a>)}
+      <nav className="pricing-tabs" aria-label="Package categories">
+        {categories.map((item, index) => <button type="button" key={item.name} className={"pricing-tab" + (active === index ? " active" : "")} onClick={() => setActive(index)}>{item.name}</button>)}
       </nav>
-      {categories.map((category, index) => <section className="pricing-category-block" id={"package-category-" + index} key={category.name}>
-        <div className="pricing-selected-heading"><div><span className="pricing-kicker">SERVICE CATEGORY {String(index + 1).padStart(2, "0")}</span><h3>{category.name}</h3><p>{category.note}</p></div><span className="pricing-count">{String(index + 1).padStart(2, "0")} <i>/ {categories.length}</i></span></div>
+      <section className="pricing-category-block" key={category.name}>
+        <div className="pricing-selected-heading"><div><span className="pricing-kicker">SERVICE CATEGORY {String(active + 1).padStart(2, "0")}</span><h3>{category.name}</h3><p>{category.note}</p></div><span className="pricing-count">{String(active + 1).padStart(2, "0")} <i>/ {categories.length}</i></span></div>
         <div className="pricing-cards">
-          {category.plans.map((plan) => <article className={"pricing-card" + (plan.featured ? " pricing-featured" : "")} key={plan.name}>
+          {category.plans.map((plan, planIndex) => <article className={"pricing-card" + (plan.featured ? " pricing-featured" : "")} key={plan.name}>
             <div className="pricing-card-top"><span className="pricing-plan-name">{plan.name}</span>{plan.featured && <span className="pricing-popular">POPULAR CHOICE</span>}</div>
             <div className="pricing-price">{plan.price}<small>{plan.cadence || (plan.price === "Custom" ? "scope based" : "one-time")}</small></div>
             <div className="pricing-rule" />
-            <ul>{plan.features.map((feature) => <li key={feature}><span>✓</span>{feature}</li>)}</ul>
-            <Link className="pricing-cta" href={"/contact?service=" + encodeURIComponent(category.name + " - " + plan.name)}>Get Started <span>↗</span></Link>
+            <div className="pricing-card-scroll">
+              <ul>{plan.features.map((feature) => <li key={feature}><span>✓</span>{feature}</li>)}</ul>
+              {active === 0 && <><h4 className="pricing-includes-title">You’ll get</h4><ul>
+                {["Award Winning Design Team","100% Satisfaction Guarantee","100% Unique Design Guarantee","Money Back Guarantee*","100% Ownership Rights","Complete source files delivery","Free NDA (optional)"].map((feature) => <li key={feature}><span>✓</span>{feature}</li>)}
+              </ul></>}
+            </div>
+            <Link className="pricing-cta" href={"/contact?service=" + encodeURIComponent(category.name + " - " + plan.name)}>Get Started <span>→</span></Link>
           </article>)}
         </div>
-      </section>)}
+      </section>
       <p className="pricing-footnote">All prices are shown in USD as listed by the reference provider. Confirm current pricing, scope, delivery time and third-party costs before purchase. The reference page lists Enterprise ORM with PPC details; confirm that package directly.</p>
     </div></section>
     <section className="pricing-process"><div className="container pricing-process-inner"><div><div className="eyebrow"><span className="eyebrow-line" /> HOW IT WORKS</div><h2>Clear scope.<br /><span>Confident next steps.</span></h2></div><div className="pricing-process-steps"><div><b>01</b><h3>Choose a service</h3><p>Select the category and package closest to your needs.</p></div><div><b>02</b><h3>Share your goals</h3><p>Tell us about your audience, timeline, and requirements.</p></div><div><b>03</b><h3>Confirm your scope</h3><p>We’ll confirm deliverables, timing, and the final quote before work begins.</p></div></div></div></section>
