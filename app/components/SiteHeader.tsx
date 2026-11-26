@@ -24,10 +24,10 @@ const serviceGroups = [
   { title: "Brand Identity", slug: "brand-identity", children: [
     ["Brand Identity","brand-identity"],["Branding","branding"],["Brand Strategy","brand-strategy"],["Brand Voice","brand-voice"]
   ]},
-  { title: "Graphic Design", slug: "graphic-design", children: [] },
-  { title: "Content Writing", slug: "content-writing", children: [
-    ["Website Content","website-content"],["Blog Writing","blog-writing"]
-  ] }
+  { title: "Content & Grant Writing", slug: "content-writing", children: [
+    ["Content Writing","content-writing"],["Website Content","website-content"],["Blog Writing","blog-writing"],["Grant Writing","grant-writing"],["eBook Writing","ebook-writing"]
+  ] },
+  { title: "Video Editing", slug: "video-editing", children: [] }
 ];
 
 export default function SiteHeader() {
