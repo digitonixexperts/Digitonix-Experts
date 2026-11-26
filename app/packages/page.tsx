@@ -59,7 +59,11 @@ const categories: Category[] = [
 { name:"Content Writing",note:"Useful, audience-focused writing for websites, blogs and marketing.",plans:[
 {name:"Content Starter",price:"$199",features:["Up to 3 short-form content pieces","Up to 500 words per piece","Topic and keyword alignment","Original writing and proofreading","One tone-of-voice direction","2 revision rounds"]},
 {name:"Content Growth",price:"$449",featured:true,features:["Up to 5 content pieces","Up to 1,000 words per piece","Topic research and outlines","SEO-informed headings and structure","Original writing and editing","Meta title and description for web articles","3 revision rounds"]},
-{name:"Content Authority",price:"$899",features:["Up to 10 content pieces","Up to 1,200 words per piece","Content calendar and topic planning","Audience and competitor research","SEO-informed writing and internal link suggestions","Editing and proofreading","Meta titles and descriptions","Monthly content performance recommendations"]}]}
+{name:"Content Authority",price:"$899",features:["Up to 10 content pieces","Up to 1,200 words per piece","Content calendar and topic planning","Audience and competitor research","SEO-informed writing and internal link suggestions","Editing and proofreading","Meta titles and descriptions","Monthly content performance recommendations"]}]},
+ { name:"Video Editing",note:"Professional edits for social media, YouTube, marketing and business content.",plans:[
+ {name:"Video Starter",price:"$149",features:["Up to 3 short-form videos (up to 60 seconds each)","Clean cuts and basic transitions","Background music and audio balancing","Basic color correction","Captions or subtitles","1 revision round","Exports for one platform format"]},
+ {name:"Video Professional",price:"$349",featured:true,features:["Up to 8 short-form videos (up to 60 seconds each) OR 2 long-form videos (up to 10 minutes each)","Advanced cuts, pacing and transitions","Branded titles and lower thirds","Captions and subtitles","Audio cleanup and color correction","Basic motion graphics","2 revision rounds","Platform-ready exports in agreed formats"]},
+ {name:"Video Premium",price:"$699",features:["Up to 15 short-form videos (up to 60 seconds each) OR 4 long-form videos (up to 15 minutes each)","Advanced storytelling and editing","Custom intro and outro","Motion graphics and animated text","Detailed audio cleanup and color grading","Captions and platform-specific versions","3 revision rounds","Priority delivery and organized final exports"]}]}
 ];
 
 export default function PackagesPage() {
