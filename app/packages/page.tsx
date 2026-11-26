@@ -1,6 +1,5 @@
 "use client";
 
-import { useMemo, useState } from "react";
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 
@@ -116,8 +115,6 @@ const categories: Category[] = [
 ];
 
 export default function PackagesPage() {
-  const [active, setActive] = useState(0);
-  const selected = useMemo(() => categories[active], [active]);
   return <main className="pricing-page">
     <div className="announcement"><span className="status-dot" /> DIGITAL PARTNERS FOR AMBITIOUS BUSINESSES <span className="announcement-right">SERVING CLIENTS ACROSS THE UNITED STATES</span></div>
     <SiteHeader />
@@ -128,21 +125,23 @@ export default function PackagesPage() {
       <div className="pricing-meta"><span><b>{categories.length}</b> service categories</span><i /> <span>USD packages</span><i /> <span>Clear package details</span></div>
     </div></section>
     <section className="pricing-catalog"><div className="container">
-      <div className="pricing-section-heading"><div><div className="eyebrow"><span className="eyebrow-line" /> EXPLORE PACKAGES</div><h2>Find the right <span>package for you.</span></h2></div><p>Every project is different. Prices and package details are transcribed from the reference catalogue. Confirm availability, exact scope and third-party costs before ordering.</p></div>
-      <div className="pricing-tabs" role="tablist" aria-label="Package categories">
-        {categories.map((category, index) => <button key={category.name} role="tab" aria-selected={active === index} className={active === index ? "pricing-tab active" : "pricing-tab"} onClick={() => setActive(index)}>{category.name}</button>)}
-      </div>
-      <div className="pricing-selected-heading"><div><span className="pricing-kicker">SELECTED SERVICE</span><h3>{selected.name}</h3><p>{selected.note}</p></div><span className="pricing-count">{String(active + 1).padStart(2, "0")} <i>/ {categories.length}</i></span></div>
-      <div className="pricing-cards" role="tabpanel">
-        {selected.plans.map((plan) => <article className={"pricing-card" + (plan.featured ? " pricing-featured" : "")} key={plan.name}>
-          <div className="pricing-card-top"><span className="pricing-plan-name">{plan.name}</span>{plan.featured && <span className="pricing-popular">POPULAR CHOICE</span>}</div>
-          <div className="pricing-price">{plan.price}<small>{plan.cadence || (plan.price === "Custom" ? "scope based" : "one-time")}</small></div>
-          <div className="pricing-rule" />
-          <ul>{plan.features.map((feature) => <li key={feature}><span>✓</span>{feature}</li>)}</ul>
-          <Link className="pricing-cta" href={"/contact?service=" + encodeURIComponent(selected.name + " - " + plan.name)}>Get Started <span>↗</span></Link>
-        </article>)}
-      </div>
-      <p className="pricing-footnote">All prices are shown in USD as listed by the reference provider. Confirm current pricing, scope, delivery time and third-party costs before purchase. The Enterprise ORM source listing appears to repeat PPC details, so confirm that package directly.</p>
+      <div className="pricing-section-heading"><div><div className="eyebrow"><span className="eyebrow-line" /> EXPLORE ALL PACKAGES</div><h2>Find the right <span>package for you.</span></h2></div><p>All service categories and package tiers are displayed below in one page. Scroll to compare prices, features and deliverables.</p></div>
+      <nav className="pricing-tabs" aria-label="Jump to package category">
+        {categories.map((category, index) => <a key={category.name} className="pricing-tab" href={"#package-category-" + index}>{category.name}</a>)}
+      </nav>
+      {categories.map((category, index) => <section className="pricing-category-block" id={"package-category-" + index} key={category.name}>
+        <div className="pricing-selected-heading"><div><span className="pricing-kicker">SERVICE CATEGORY {String(index + 1).padStart(2, "0")}</span><h3>{category.name}</h3><p>{category.note}</p></div><span className="pricing-count">{String(index + 1).padStart(2, "0")} <i>/ {categories.length}</i></span></div>
+        <div className="pricing-cards">
+          {category.plans.map((plan) => <article className={"pricing-card" + (plan.featured ? " pricing-featured" : "")} key={plan.name}>
+            <div className="pricing-card-top"><span className="pricing-plan-name">{plan.name}</span>{plan.featured && <span className="pricing-popular">POPULAR CHOICE</span>}</div>
+            <div className="pricing-price">{plan.price}<small>{plan.cadence || (plan.price === "Custom" ? "scope based" : "one-time")}</small></div>
+            <div className="pricing-rule" />
+            <ul>{plan.features.map((feature) => <li key={feature}><span>✓</span>{feature}</li>)}</ul>
+            <Link className="pricing-cta" href={"/contact?service=" + encodeURIComponent(category.name + " - " + plan.name)}>Get Started <span>↗</span></Link>
+          </article>)}
+        </div>
+      </section>)}
+      <p className="pricing-footnote">All prices are shown in USD as listed by the reference provider. Confirm current pricing, scope, delivery time and third-party costs before purchase. The reference page lists Enterprise ORM with PPC details; confirm that package directly.</p>
     </div></section>
     <section className="pricing-process"><div className="container pricing-process-inner"><div><div className="eyebrow"><span className="eyebrow-line" /> HOW IT WORKS</div><h2>Clear scope.<br /><span>Confident next steps.</span></h2></div><div className="pricing-process-steps"><div><b>01</b><h3>Choose a service</h3><p>Select the category and package closest to your needs.</p></div><div><b>02</b><h3>Share your goals</h3><p>Tell us about your audience, timeline, and requirements.</p></div><div><b>03</b><h3>Confirm your scope</h3><p>We’ll confirm deliverables, timing, and the final quote before work begins.</p></div></div></div></section>
     <section className="pricing-bottom-cta"><div className="container"><div><span>HAVE A PROJECT THAT NEEDS A CUSTOM SCOPE?</span><h2>Let’s build the right plan.</h2></div><Link className="button button-blue" href="/contact">Talk to our team ↗</Link></div></section>
