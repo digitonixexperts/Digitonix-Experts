@@ -24,8 +24,12 @@ const serviceGroups = [
   { title: "Brand Identity", slug: "brand-identity", children: [
     ["Brand Identity","brand-identity"],["Branding","branding"],["Brand Strategy","brand-strategy"],["Brand Voice","brand-voice"]
   ]},
-  { title: "Content & Grant Writing", slug: "content-writing", children: [
-    ["Content Writing","content-writing"],["Website Content","website-content"],["Blog Writing","blog-writing"],["Grant Writing","grant-writing"],["eBook Writing","ebook-writing"]
+  { title: "Content Writing", slug: "content-writing", children: [
+    ["Website Content","website-content"],["Blog Writing","blog-writing"]
+  ] },
+  { title: "Grant Writing", slug: "grant-writing", children: [] },
+  { title: "eBook Writing", slug: "ebook-writing", children: [
+    ["eBook Ghostwriting","ebook-writing"],["Editing & Proofreading","ebook-writing"],["eBook Formatting","ebook-writing"],["eBook Cover Design","ebook-writing"],["Amazon KDP Publishing","ebook-writing"]
   ] },
   { title: "Video Editing", slug: "video-editing", children: [] }
 ];
