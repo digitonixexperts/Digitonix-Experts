@@ -1470,3 +1470,24 @@ img,video,svg{max-width:100%}
  .pricing-tab{padding:8px 11px;font-size:11px}
  .pricing-card{height:370px;min-height:370px}
 }
+
+
+/* Packages page blue theme */
+.pricing-hero{background:linear-gradient(135deg,#f1f8ff 0%,#fff 58%,#eaf4ff 100%);border-bottom-color:#dceafa}
+.pricing-hero h1 span,.pricing-section-heading h2 span,.pricing-process h2 span{color:#087fe0}
+.pricing-meta b,.pricing-kicker,.pricing-count{color:#087fe0}
+.pricing-tabs{border-color:#dceafa}
+.pricing-tab:hover{border-color:#087fe0;color:#087fe0;background:#f2f8ff}
+.pricing-tab.active{background:#087fe0;border-color:#087fe0;color:#fff;box-shadow:0 4px 12px rgba(8,127,224,.18)}
+.pricing-plan-name{color:#087fe0}
+.pricing-popular{background:#e5f2ff;color:#075da8}
+.pricing-card-scroll{scrollbar-color:#087fe0 transparent}
+.pricing-card-scroll::-webkit-scrollbar-thumb{background:#087fe0}
+.pricing-card-scroll li span{background:#087fe0}
+.pricing-cta{background:#087fe0;color:#fff}
+.pricing-cta:hover{background:#0667bb}
+.pricing-process{background:#f3f8ff;border-color:#dceafa}
+.pricing-process-steps>div{border-color:#087fe0}
+.pricing-process-steps b{color:#087fe0}
+.pricing-bottom-cta .button{background:#087fe0}
+.pricing-bottom-cta .button:hover{background:#0667bb}
