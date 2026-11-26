@@ -39,7 +39,27 @@ const categories: Category[] = [
 { name:"App Development",note:"Purpose-built mobile and web applications planned around real user workflows.",plans:[
 {name:"App Prototype",price:"$1,999",features:["Project discovery and feature outline","User flows and wireframes","UI design up to 8 screens","Clickable prototype","Responsive design direction","Technical scope recommendation","Design file handover"]},
 {name:"App Launch",price:"$4,999",featured:true,features:["Custom app UI up to 12 screens","User registration and profile flow","Backend and database foundation","Up to 3 agreed core features","Basic admin functionality","API integration where required","Testing and deployment assistance","Technical handover documentation"]},
-{name:"App Scale",price:"$9,999",features:["Product discovery and architecture","Custom UI up to 25 screens","Backend, database and admin dashboard","Up to 6 agreed feature modules","Third-party API integrations","Role-based access and notifications","QA, performance and security review","Deployment support and documentation"]}]}
+{name:"App Scale",price:"$9,999",features:["Product discovery and architecture","Custom UI up to 25 screens","Backend, database and admin dashboard","Up to 6 agreed feature modules","Third-party API integrations","Role-based access and notifications","QA, performance and security review","Deployment support and documentation"]}]},
+{ name:"Social Media Management",note:"Consistent day-to-day social presence with planned content and community care.",plans:[
+{name:"Social Starter",price:"$299",cadence:"/ month",features:["Management of 1 social platform","8 monthly feed posts","Caption writing and hashtag research","Monthly content calendar","Basic scheduling and publishing","Comment and inbox monitoring (weekday)","Monthly activity summary"]},
+{name:"Social Growth",price:"$599",cadence:"/ month",featured:true,features:["Management of up to 2 platforms","12 monthly posts and 4 story sets","Branded content scheduling","Captions and hashtag strategy","Community engagement (weekday)","Monthly content calendar","Profile optimization","Monthly performance report"]},
+{name:"Social Pro",price:"$999",cadence:"/ month",features:["Management of up to 3 platforms","16 monthly posts and 8 story sets","Short-form video editing up to 4 clips","Content calendar and publishing","Community engagement and moderation","Monthly strategy and competitor review","Profile optimization","Performance report and planning call"]}]},
+{ name:"Social Media Marketing",note:"Paid and organic social campaigns designed to reach the right audience.",plans:[
+{name:"Campaign Starter",price:"$399",cadence:"/ month",features:["One social ad platform","Campaign and audience research","Campaign setup","Up to 2 ad creative concepts","Pixel or tracking guidance","Weekly optimization checks","Monthly results report","Ad spend billed separately"]},
+{name:"Campaign Growth",price:"$799",cadence:"/ month",featured:true,features:["Up to 2 social ad platforms","Campaign funnel planning","Up to 4 ad creative concepts","Audience and retargeting setup","Conversion tracking guidance","Ongoing campaign optimization","A/B creative testing","Monthly performance review","Ad spend billed separately"]},
+{name:"Campaign Scale",price:"$1,499",cadence:"/ month",features:["Up to 3 social ad platforms","Multi-campaign strategy and management","Up to 8 ad creative variations","Advanced audience segmentation","Retargeting and lookalike strategy","Conversion tracking review","A/B testing and budget recommendations","Weekly optimization and monthly strategy call","Ad spend billed separately"]}]},
+{ name:"eBook Writing",note:"Well-structured digital books that communicate your expertise and ideas.",plans:[
+{name:"eBook Essentials",price:"$249",features:["Up to 3,000 words","Topic and outline development","Original writing and editing","Basic formatting for digital reading","One title and subtitle suggestion","2 revision rounds","Final editable document"]},
+{name:"eBook Professional",price:"$599",featured:true,features:["Up to 7,500 words","Research and detailed outline","Original chapter-by-chapter writing","Proofreading and editing","Clickable contents page","Basic eBook formatting","Cover concept direction","3 revision rounds"]},
+{name:"eBook Complete",price:"$1,099",features:["Up to 15,000 words","Topic research and content strategy","Original writing and structural editing","Proofreading and fact-check pass","Professional eBook layout","Cover design","EPUB and PDF-ready files","3 revision rounds"]}]},
+{ name:"Grant Writing",note:"Clear, persuasive grant documents aligned with funder requirements.",plans:[
+{name:"Grant Review",price:"$299",features:["Review of one grant opportunity","Eligibility and requirement checklist","Review of existing proposal materials","Gap and improvement recommendations","One consultation session","Written review summary"]},
+{name:"Grant Proposal",price:"$899",featured:true,features:["One grant application narrative","Funder and guideline review","Project description and needs statement","Goals, outcomes and impact narrative","Editing for clarity and alignment","One revision round","Submission-readiness checklist"]},
+{name:"Grant Partnership",price:"$1,799",features:["One comprehensive grant proposal","Funder research for agreed opportunity","Needs statement and project narrative","Goals, outcomes and evaluation plan","Organization capacity narrative","Budget narrative support (client figures supplied)","Supporting document checklist","Up to 2 revision rounds"]}]},
+{ name:"Content Writing",note:"Useful, audience-focused writing for websites, blogs and marketing.",plans:[
+{name:"Content Starter",price:"$199",features:["Up to 3 short-form content pieces","Up to 500 words per piece","Topic and keyword alignment","Original writing and proofreading","One tone-of-voice direction","2 revision rounds"]},
+{name:"Content Growth",price:"$449",featured:true,features:["Up to 5 content pieces","Up to 1,000 words per piece","Topic research and outlines","SEO-informed headings and structure","Original writing and editing","Meta title and description for web articles","3 revision rounds"]},
+{name:"Content Authority",price:"$899",features:["Up to 10 content pieces","Up to 1,200 words per piece","Content calendar and topic planning","Audience and competitor research","SEO-informed writing and internal link suggestions","Editing and proofreading","Meta titles and descriptions","Monthly content performance recommendations"]}]}
 ];
 
 export default function PackagesPage() {
@@ -68,9 +88,7 @@ export default function PackagesPage() {
             <div className="pricing-rule" />
             <div className="pricing-card-scroll">
               <ul>{plan.features.map((feature) => <li key={feature}><span>✓</span>{feature}</li>)}</ul>
-              {active === 0 && <><h4 className="pricing-includes-title">You’ll get</h4><ul>
-                {["Award Winning Design Team","100% Satisfaction Guarantee","100% Unique Design Guarantee","Money Back Guarantee*","100% Ownership Rights","Complete source files delivery","Free NDA (optional)"].map((feature) => <li key={feature}><span>✓</span>{feature}</li>)}
-              </ul></>}
+
             </div>
             <Link className="pricing-cta" href={"/contact?service=" + encodeURIComponent(category.name + " - " + plan.name)}>Get Started <span>→</span></Link>
           </article>)}
