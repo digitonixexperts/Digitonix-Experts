@@ -114,7 +114,7 @@ export default function Page() {
         .column-3 .gallery-track{animation:galleryUp 43s linear infinite}
         .column-4 .gallery-track{animation:galleryDown 36s linear infinite}
         .filtered-gallery{height:auto;min-height:280px;grid-template-columns:repeat(4,minmax(0,1fr));align-items:start}
-        .filtered-gallery .gallery-column{height:auto}
+        .filtered-gallery .gallery-column{height:100%}
         .filtered-gallery .gallery-track{animation-play-state:paused}
         .gallery-card{background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 8px 24px rgba(20,20,20,.055);border:1px solid rgba(0,0,0,.035);transition:transform .35s,box-shadow .35s;flex:0 0 auto}
         .gallery-card:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(20,20,20,.13)}
