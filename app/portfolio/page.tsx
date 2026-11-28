@@ -4,10 +4,10 @@ import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 
 const projects = [
-  { title: "Jewellery Limited", type: "E-Commerce · Jewellery", image: "/portfolio/jewellery-store.svg", number: "01", tone: "lavender" },
-  { title: "Borcelle Frappe", type: "E-Commerce · Food & Beverage", image: "/portfolio/frappe-ecommerce.svg", number: "02", tone: "green" },
-  { title: "Studio Shodwe", type: "Website · Skincare & Beauty", image: "/portfolio/skincare-product.svg", number: "03", tone: "silver" },
-  { title: "Borcelle Fitness", type: "Website · Fitness & Wellness", image: "/portfolio/fitness-website.svg", number: "04", tone: "dark" },
+  { title: "Jewellery Limited", type: "E-Commerce · Jewellery", image: "https://dmmcy0pwk6bqi.cloudfront.net/7ceb7f4f280ec743f335448c9dcd1681e7d93d59", number: "01", tone: "lavender" },
+  { title: "Borcelle Frappe", type: "E-Commerce · Food & Beverage", image: "https://dmmcy0pwk6bqi.cloudfront.net/b086aec381f42aa673415a31f697a3a6bbde2a94", number: "02", tone: "green" },
+  { title: "Studio Shodwe", type: "Website · Skincare & Beauty", image: "https://dmmcy0pwk6bqi.cloudfront.net/c9d9e6205737d68f40a91e893628fef02f37d49b", number: "03", tone: "silver" },
+  { title: "Borcelle Fitness", type: "Website · Fitness & Wellness", image: "https://dmmcy0pwk6bqi.cloudfront.net/0406673793d5a8fd356b65f5ed7f94deb7070803", number: "04", tone: "dark" },
 ];
 
 export default function Page() {
