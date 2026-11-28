@@ -4,9 +4,9 @@ import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 
 const project = {
-  title: "PureGym",
-  type: "Website · Fitness & Gym",
-  image: "https://image.thum.io/get/width/1200/crop/1600/noanimate/https://www.puregym.com/us/",
+  title: "Caffè Nero",
+  type: "Website · Coffee & Café",
+  image: "https://image.thum.io/get/width/1200/crop/2048/noanimate/https://www.caffenero.com/us",
 };
 
 export default function Page() {
@@ -16,20 +16,20 @@ export default function Page() {
       <section className="intro">
         <div className="eyebrow">DIGITONIX EXPERTS / SELECTED PROJECT</div>
         <h1>Digital experiences,<br /><span>in motion.</span></h1>
-        <p>A featured website experience for a modern fitness brand.</p>
+        <p>A featured full-page website experience for a coffee brand.</p>
         <div className="hint">SCROLL THE PAGE PREVIEW <span>↓</span></div>
       </section>
 
       <section className="reel" aria-label="Featured portfolio project">
         <article className="project">
-          <a className="preview" href="https://www.puregym.com/us/" target="_blank" rel="noreferrer" aria-label="Open PureGym website">
+          <a className="preview" href="https://www.caffenero.com/us" target="_blank" rel="noreferrer" aria-label="Open Caffè Nero website">
             <div className="browser-bar">
               <div className="browser-dots"><i /><i /><i /></div>
-              <span>puregym.com/us</span>
+              <span>caffenero.com/us</span>
               <b>↗</b>
             </div>
             <div className="screen">
-              <img src={project.image} alt="PureGym website full-page preview" />
+              <img src={project.image} alt="Caffè Nero website full-page preview" />
             </div>
             <div className="preview-label">LIVE WEBSITE <span>↗</span></div>
           </a>
@@ -37,9 +37,9 @@ export default function Page() {
             <div>
               <span className="project-type">{project.type}</span>
               <h2>{project.title}</h2>
-              <p>Fitness-focused digital experience featuring gym memberships, location discovery, personal training and member tools.</p>
+              <p>Full-page coffee brand experience featuring seasonal campaigns, menus, café spaces, home coffee products and editorial content.</p>
             </div>
-            <a className="visit" href="https://www.puregym.com/us/" target="_blank" rel="noreferrer">Visit website <b>↗</b></a>
+            <a className="visit" href="https://www.caffenero.com/us" target="_blank" rel="noreferrer">Visit website <b>↗</b></a>
           </div>
         </article>
       </section>
