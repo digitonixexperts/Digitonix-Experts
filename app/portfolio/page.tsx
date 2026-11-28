@@ -3,37 +3,47 @@
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 
-const projects = [
-  { title: "Jewellery Limited", type: "E-Commerce · Jewellery", image: "https://dmmcy0pwk6bqi.cloudfront.net/7ceb7f4f280ec743f335448c9dcd1681e7d93d59", number: "01", tone: "lavender" },
-  { title: "Borcelle Frappe", type: "E-Commerce · Food & Beverage", image: "https://dmmcy0pwk6bqi.cloudfront.net/b086aec381f42aa673415a31f697a3a6bbde2a94", number: "02", tone: "green" },
-  { title: "Studio Shodwe", type: "Website · Skincare & Beauty", image: "https://dmmcy0pwk6bqi.cloudfront.net/c9d9e6205737d68f40a91e893628fef02f37d49b", number: "03", tone: "silver" },
-  { title: "Borcelle Fitness", type: "Website · Fitness & Wellness", image: "https://dmmcy0pwk6bqi.cloudfront.net/0406673793d5a8fd356b65f5ed7f94deb7070803", number: "04", tone: "dark" },
-];
+const project = {
+  title: "Caffè Nero",
+  type: "Website · Coffee & Café",
+  image: "https://image.thum.io/get/width/1200/crop/1600/noanimate/https://www.caffenero.com/us",
+};
 
 export default function Page() {
   return (
     <main className="portfolio-page">
       <SiteHeader />
       <section className="intro">
-        <div className="eyebrow">DIGITONIX EXPERTS / SELECTED PROJECTS</div>
-        <h1>Ideas made <span>visible.</span></h1>
-        <p>A selection of digital storefronts and brand experiences across different industries.</p>
-        <div className="hint">HOVER OVER A PROJECT TO EXPLORE <span>↘</span></div>
+        <div className="eyebrow">DIGITONIX EXPERTS / SELECTED PROJECT</div>
+        <h1>Digital experiences,<br /><span>in motion.</span></h1>
+        <p>A featured website experience for a modern coffee brand.</p>
+        <div className="hint">SCROLL THE PAGE PREVIEW <span>↓</span></div>
       </section>
-      <section className="gallery" aria-label="Selected portfolio projects">
-        {projects.map((project) => (
-          <article className={`project ${project.tone}`} key={project.number}>
-            <div className="project-image">
-              <img src={project.image} alt={project.title + " website design mockup"} />
-              <div className="image-overlay"><span>VIEW CONCEPT</span><b>↗</b></div>
+
+      <section className="reel" aria-label="Featured portfolio project">
+        <article className="project">
+          <a className="preview" href="https://www.caffenero.com/us" target="_blank" rel="noreferrer" aria-label="Open Caffè Nero website">
+            <div className="browser-bar">
+              <div className="browser-dots"><i /><i /><i /></div>
+              <span>caffenero.com/us</span>
+              <b>↗</b>
             </div>
-            <div className="project-meta">
-              <div><span className="project-type">{project.type}</span><h2>{project.title}</h2></div>
-              <span className="project-number">{project.number}</span>
+            <div className="screen">
+              <img src={project.image} alt="Caffè Nero website full-page preview" />
             </div>
-          </article>
-        ))}
+            <div className="preview-label">LIVE WEBSITE <span>↗</span></div>
+          </a>
+          <div className="project-meta">
+            <div>
+              <span className="project-type">{project.type}</span>
+              <h2>{project.title}</h2>
+              <p>Brand-led digital storefront with coffee, food, drinks and mobile ordering experiences.</p>
+            </div>
+            <a className="visit" href="https://www.caffenero.com/us" target="_blank" rel="noreferrer">Visit website <b>↗</b></a>
+          </div>
+        </article>
       </section>
+
       <section className="closing">
         <span>HAVE A PROJECT IN MIND?</span>
         <h2>Let’s make something<br/><em>worth looking at.</em></h2>
@@ -44,33 +54,37 @@ export default function Page() {
         .intro{padding:74px clamp(22px,6vw,90px) 28px;position:relative}
         .eyebrow,.hint,.project-type,.closing>span{font-size:10px;letter-spacing:2px;font-weight:800;color:#777}
         h1{font-size:clamp(46px,8vw,104px);letter-spacing:-5px;line-height:.95;margin:25px 0 16px;font-weight:900}
-        h1 span{color:#ef9b18}
+        h1 span{color:#b58a43}
         .intro p{font-size:15px;color:#666;max-width:520px;line-height:1.7}
         .hint{position:absolute;right:clamp(22px,6vw,90px);bottom:36px}
-        .hint span{color:#ef9b18;font-size:17px;margin-left:8px}
-        .gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding:22px clamp(16px,4vw,60px) 80px}
-        .project{min-width:0;background:white;border-radius:4px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.045);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
-        .project:hover{transform:translateY(-8px);box-shadow:0 24px 55px rgba(0,0,0,.13)}
-        .project-image{position:relative;overflow:hidden;aspect-ratio:16/9;background:#e9e9e9}
-        .project-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.1s cubic-bezier(.2,.7,.2,1);animation:softFloat 8s ease-in-out infinite alternate}
-        .project:nth-child(even) .project-image img{animation-delay:-3s}
-        .project:hover .project-image img{transform:scale(1.055)}
-        .image-overlay{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:space-between;padding:22px;background:linear-gradient(transparent,rgba(0,0,0,.48));color:white;opacity:0;transition:opacity .35s}
-        .image-overlay span{font-size:10px;letter-spacing:2px;font-weight:800}
-        .image-overlay b{font-size:24px}
-        .project:hover .image-overlay{opacity:1}
-        .project-meta{display:flex;justify-content:space-between;align-items:center;padding:20px 22px 22px}
+        .hint span{color:#b58a43;font-size:17px;margin-left:8px}
+        .reel{padding:22px clamp(16px,4vw,60px) 80px}
+        .project{max-width:1120px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,.09)}
+        .preview{display:block;position:relative;text-decoration:none;color:#fff;background:#161616;overflow:hidden}
+        .browser-bar{height:44px;background:#202020;display:flex;align-items:center;justify-content:center;position:relative;font-size:11px;color:#c9c9c9;letter-spacing:.4px}
+        .browser-dots{position:absolute;left:16px;display:flex;gap:6px}
+        .browser-dots i{width:8px;height:8px;border-radius:50%;background:#777}
+        .browser-dots i:first-child{background:#e47e75}.browser-dots i:nth-child(2){background:#e3bd68}.browser-dots i:nth-child(3){background:#76b77d}
+        .browser-bar b{position:absolute;right:16px;font-size:17px}
+        .screen{height:clamp(360px,58vw,690px);overflow:hidden;position:relative;background:#eee}
+        .screen img{display:block;width:100%;height:auto;min-height:100%;object-fit:cover;object-position:top;animation:reelScroll 22s ease-in-out infinite alternate}
+        .preview:hover .screen img{animation-play-state:paused}
+        .preview-label{position:absolute;right:20px;bottom:20px;background:#fff;color:#171717;border-radius:30px;padding:10px 16px;font-size:10px;font-weight:800;letter-spacing:1.2px;box-shadow:0 5px 20px #0002}
+        .preview-label span{margin-left:10px;color:#b58a43}
+        .project-meta{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 32px 32px}
         .project-type{font-size:9px;letter-spacing:1.5px}
-        h2{font-size:clamp(18px,2vw,25px);margin:8px 0 0;letter-spacing:-.6px}
-        .project-number{font-size:11px;font-weight:800;background:#171717;color:#fff;border-radius:30px;padding:8px 10px}
+        h2{font-size:clamp(24px,3vw,36px);margin:8px 0;letter-spacing:-1px}
+        .project-meta p{font-size:14px;color:#777;line-height:1.6;margin:0;max-width:560px}
+        .visit{display:inline-flex;gap:24px;align-items:center;white-space:nowrap;background:#171717;color:white;text-decoration:none;padding:14px 20px;border-radius:30px;font-size:12px;font-weight:800;transition:background .2s}
+        .visit:hover{background:#b58a43}
         .closing{margin:0 clamp(16px,4vw,60px) 70px;padding:65px 30px;background:#171717;color:white;text-align:center;border-radius:5px}
         .closing>span{color:#b8b8b8}
         .closing h2{font-size:clamp(34px,5vw,64px);line-height:1.02;letter-spacing:-2px;margin:20px 0 28px}
-        .closing h2 em{font-style:normal;color:#f3a51d}
-        .closing a{display:inline-flex;gap:28px;align-items:center;background:#f3a51d;color:#171717;text-decoration:none;padding:14px 23px;border-radius:30px;font-weight:800}
-        @keyframes softFloat{from{transform:scale(1)}to{transform:scale(1.018)}}
-        @media(max-width:760px){.intro{padding-top:52px}.intro h1{letter-spacing:-2.5px}.hint{position:static;margin-top:25px}.gallery{grid-template-columns:1fr;gap:18px;padding-bottom:54px}.project-meta{padding:16px}.closing{margin-bottom:36px;padding:48px 20px}.image-overlay{opacity:.7}}
-        @media(prefers-reduced-motion:reduce){.project,.project-image img,.image-overlay{transition:none;animation:none}}
+        .closing h2 em{font-style:normal;color:#c6a36b}
+        .closing a{display:inline-flex;gap:28px;align-items:center;background:#c6a36b;color:#171717;text-decoration:none;padding:14px 23px;border-radius:30px;font-weight:800}
+        @keyframes reelScroll{0%{transform:translateY(0)}100%{transform:translateY(min(-35%, -360px))}}
+        @media(max-width:760px){.intro{padding-top:52px}.intro h1{letter-spacing:-2.5px}.hint{position:static;margin-top:25px}.reel{padding-bottom:54px}.screen{height:430px}.project-meta{padding:20px;align-items:flex-start;flex-direction:column}.visit{margin-top:4px}.closing{margin-bottom:36px;padding:48px 20px}}
+        @media(prefers-reduced-motion:reduce){.screen img{animation:none}}
       `}</style>
     </main>
   );
