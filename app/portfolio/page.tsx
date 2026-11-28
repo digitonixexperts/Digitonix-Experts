@@ -3,7 +3,7 @@
 import SiteHeader from "../components/SiteHeader";
 
 const websiteWork = [
-  { name: "Fitness & Wellness", type: "WEBSITE DESIGN", image: "/portfolio/fitness-website.svg", description: "Clean, conversion-focused layouts for fitness brands and membership experiences." },
+  { name: "Fitness & Wellness", type: "WEBSITE DESIGN", image: "/portfolio/gymcare-fitness.png", description: "Clean, conversion-focused layouts for fitness brands and membership experiences." },
   { name: "E-commerce Experiences", type: "ONLINE STORES", image: "/portfolio/showcase-ecommerce.svg", description: "Product-led storefronts designed to make browsing simple and shopping seamless." },
   { name: "Jewellery & Lifestyle", type: "BRAND WEBSITES", image: "/portfolio/showcase-jewellery.svg", description: "Elegant digital storefront concepts with thoughtful visual storytelling." }
 ];
