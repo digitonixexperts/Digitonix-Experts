@@ -14,14 +14,14 @@ type Project = {
 };
 
 const projects: Project[] = [
-  { id: "web-01", title: "Jewellery & Lifestyle Website", category: "Websites", image: "/portfolio/website-before-after.svg", tone: "peach", description: "Editorial-style website presentation with a premium product focus." },
-  { id: "web-02", title: "Business Website Experience", category: "Websites", image: "/portfolio/grant-content-before-after.svg", tone: "blue", description: "A clean, responsive website concept for a service-led business." },
-  { id: "shop-01", title: "E-commerce Storefront", category: "E-Commerce", image: "/portfolio/ecommerce-before-after.svg", tone: "gold", description: "Product discovery and shopping experience concept." },
-  { id: "brand-01", title: "Logo & Brand Identity", category: "Logo", image: "/portfolio/branding-before-after.svg", tone: "lavender", description: "A visual identity direction with a memorable logo presentation." },
-  { id: "marketing-01", title: "SEO & Search Visibility", category: "Digital Marketing", image: "/portfolio/seo-before-after.svg", tone: "mint", description: "Search-focused content and on-page optimization concept." },
-  { id: "marketing-02", title: "Social Media Campaign", category: "Digital Marketing", image: "/portfolio/social-before-after.svg", tone: "pink", description: "A coordinated social content and campaign creative direction." },
-  { id: "app-01", title: "Mobile App UI Concept", category: "Mobile Apps", image: "/portfolio/app-before-after.svg", tone: "sky", description: "Mobile-first screens and product interface exploration." },
-  { id: "motion-01", title: "Motion & Video Creative", category: "Video Animation", image: "/portfolio/ebook-before-after.svg", tone: "coral", description: "A sample visual direction for animated promotional content." },
+  { id: "web-01", title: "Jewellery & Lifestyle Website", category: "Websites", image: "/portfolio/showcase-jewellery.svg", tone: "peach", description: "Premium editorial website concept with an elegant product-led layout." },
+  { id: "web-02", title: "Creative Business Website", category: "Websites", image: "/portfolio/showcase-ecommerce.svg", tone: "blue", description: "A bright, responsive business website showcase." },
+  { id: "shop-01", title: "FreshCart E-commerce Store", category: "E-Commerce", image: "/portfolio/showcase-ecommerce.svg", tone: "gold", description: "Colorful storefront concept with category-led product discovery." },
+  { id: "brand-01", title: "Logo & Brand Identity Set", category: "Logo", image: "/portfolio/showcase-logos.svg", tone: "lavender", description: "A showcase of logo directions and identity systems." },
+  { id: "marketing-01", title: "Digital Marketing Campaign", category: "Digital Marketing", image: "/portfolio/showcase-marketing.svg", tone: "mint", description: "Bold campaign creative for social, search and brand awareness." },
+  { id: "marketing-02", title: "Social Media Creative Set", category: "Digital Marketing", image: "/portfolio/showcase-marketing.svg", tone: "pink", description: "Colorful social-first creative and promotional content." },
+  { id: "app-01", title: "Mobile App UI / UX", category: "Mobile Apps", image: "/portfolio/showcase-apps.svg", tone: "sky", description: "Mobile interface concepts with clean, modern app screens." },
+  { id: "motion-01", title: "Video & Motion Creative", category: "Video Animation", image: "/portfolio/showcase-video.svg", tone: "coral", description: "Promotional motion design and video storytelling concept." },
 ];
 
 const filters = ["All", "Websites", "E-Commerce", "Logo", "Digital Marketing", "Mobile Apps", "Video Animation"];
@@ -56,7 +56,7 @@ export default function Page() {
                 {[...column, ...column, ...column].map((project, itemIndex) => (
                   <article className={`gallery-card tone-${project.tone}`} key={`${project.id}-${itemIndex}`}>
                     <div className="gallery-image-wrap">
-                      <img src={project.image} alt={project.title} loading={itemIndex > 3 ? "lazy" : "eager"} />
+                      <img src={project.image} alt={project.title} loading={itemIndex > 3 ? "lazy" : "eager"} onError={(e) => { e.currentTarget.src = "/portfolio/showcase-jewellery.svg"; }} />
                       <span className="image-index">{String((itemIndex % Math.max(column.length, 1)) + 1).padStart(2, "0")}</span>
                     </div>
                     <div className="gallery-card-info">
@@ -71,7 +71,7 @@ export default function Page() {
           ))}
         </div>
         <p className="gallery-hint">Hover to gently auto-scroll · Move away to pause · On mobile, swipe to browse</p>
-        <p className="portfolio-note">Portfolio visuals are selected showcase concepts and sample creative work. Project examples are presented for design demonstration.</p>
+        <p className="portfolio-note">Visual showcase concepts created for this portfolio preview. Ask us about tailored work for your brand.</p>
       </section>
 
       <section className="portfolio-cta">
